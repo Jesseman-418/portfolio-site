@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 relative">
+    <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       {/* Decorative elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-neon-lime/10 to-transparent" />
 
@@ -37,14 +37,14 @@ export default function About() {
           {/* Card glow */}
           <div className="absolute -inset-2 bg-gradient-to-br from-neon-lime/[0.02] to-neon-cyan/[0.01] rounded-3xl blur-xl" />
 
-          <div className="relative glass rounded-2xl p-8 md:p-12 animate-gradient-border gradient-border">
+          <div className="relative glass rounded-2xl p-6 sm:p-8 md:p-12 animate-gradient-border gradient-border">
             {/* Corner markers */}
             <div className="absolute top-3 left-3 w-4 h-4 border-t border-l border-neon-lime/20 rounded-tl" />
             <div className="absolute top-3 right-3 w-4 h-4 border-t border-r border-neon-cyan/20 rounded-tr" />
             <div className="absolute bottom-3 left-3 w-4 h-4 border-b border-l border-neon-purple/20 rounded-bl" />
             <div className="absolute bottom-3 right-3 w-4 h-4 border-b border-r border-neon-lime/20 rounded-br" />
 
-            <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
+            <div className="space-y-6 text-gray-400 leading-relaxed text-base sm:text-lg">
               <p>
                 Final-year B.Tech Computer Science student at VIT Chennai
                 who builds{" "}

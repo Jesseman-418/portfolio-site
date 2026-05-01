@@ -4,18 +4,33 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #030303;
   color: #f9fafb;
   font-family: var(--font-sans), system-ui, sans-serif;
-  cursor: none;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 255, 0, 0.15);
 }
 
-/* Custom cursor */
+/* Custom cursor only on devices with a fine pointer (desktop) */
 @media (pointer: fine) {
+  body { cursor: none; }
   * { cursor: none !important; }
+}
+
+/* Disable heavy animations on coarse pointers / reduced motion for mobile perf */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @layer utilities {

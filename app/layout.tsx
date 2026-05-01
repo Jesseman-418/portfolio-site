@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, JetBrains_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 
@@ -45,6 +45,15 @@ export const metadata: Metadata = {
       "Full-stack engineer. AI builder. Ships production apps end-to-end.",
   },
   robots: { index: true, follow: true },
+  formatDetection: { telephone: false, email: false, address: false },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#030303",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({

@@ -45,7 +45,7 @@ const colorMap: Record<string, { bg: string; border: string; text: string; glow:
 
 export default function ArchitectureDiagram() {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 relative">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

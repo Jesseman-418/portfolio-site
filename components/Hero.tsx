@@ -106,7 +106,7 @@ function AnimatedCounter({ value, label }: { value: string; label: string }) {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden">
       {/* Scan line */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="w-full h-40 bg-gradient-to-b from-transparent via-neon-lime/[0.015] to-transparent animate-scan" />
@@ -145,7 +145,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-2"
+              className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-2"
             >
               Hi, I&apos;m{" "}
               <span className="gradient-text">Jesse</span>
@@ -157,12 +157,12 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mb-6"
             >
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
+              <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold">
                 <span className="gradient-text">
                   Full-Stack
                 </span>
               </h2>
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
+              <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold">
                 <span className="gradient-text-alt">
                   Engineer
                 </span>
@@ -176,7 +176,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-6"
             >
-              <span className="handwritten text-2xl text-neon-lime/40">
+              <span className="handwritten text-xl sm:text-2xl text-neon-lime/40">
                 I build things that work ^
               </span>
             </motion.div>
@@ -201,7 +201,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/jesse-man-devamirtham/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative w-full sm:w-auto px-8 py-4 rounded-xl bg-neon-lime/10 hover:bg-neon-lime/20 text-neon-lime font-semibold text-lg transition-all border border-neon-lime/20 hover:shadow-[0_0_30px_rgba(0,255,0,0.15)] overflow-hidden"
+                className="group relative w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl bg-neon-lime/10 hover:bg-neon-lime/20 text-neon-lime font-semibold text-lg transition-all border border-neon-lime/20 hover:shadow-[0_0_30px_rgba(0,255,0,0.15)] overflow-hidden flex items-center justify-center"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-neon-lime/5 to-neon-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="relative flex items-center gap-2">
@@ -211,7 +211,7 @@ export default function Hero() {
               </a>
               <a
                 href="#projects"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl glass text-gray-400 hover:text-neon-cyan font-medium text-lg transition-all hover:border-neon-cyan/20 gradient-border group"
+                className="w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl glass text-gray-400 hover:text-neon-cyan font-medium text-lg transition-all hover:border-neon-cyan/20 gradient-border group flex items-center justify-center"
               >
                 <span className="flex items-center gap-2">
                   View My Work

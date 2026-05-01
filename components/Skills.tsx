@@ -119,7 +119,7 @@ export default function Skills() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section id="skills" className="py-24 px-6 relative">
+    <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-neon-purple/10 to-transparent" />
 
       <div className="max-w-6xl mx-auto">
@@ -168,7 +168,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="glass rounded-xl p-8 md:p-10 max-w-2xl mx-auto gradient-border animate-gradient-border relative"
+          className="glass rounded-xl p-6 sm:p-8 md:p-10 max-w-2xl mx-auto gradient-border animate-gradient-border relative"
         >
           {/* Corner markers */}
           <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-neon-lime/10 rounded-tl" />

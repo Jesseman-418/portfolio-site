@@ -43,7 +43,7 @@ export default function Navbar() {
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon-lime/20 to-transparent" />
 
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
         <a href="#" className="group flex items-center gap-2">
           <div className="relative">
             <span className="text-xl font-bold tracking-tight gradient-text text-glow-lime">JM</span>
@@ -87,8 +87,9 @@ export default function Navbar() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-neon-lime/60 hover:text-neon-lime p-2 transition-colors"
+          className="md:hidden text-neon-lime/60 hover:text-neon-lime p-3 -m-1 transition-colors"
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileOpen ? (
@@ -101,13 +102,13 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-dark-950/95 backdrop-blur-xl border-b border-neon-lime/5 px-6 pb-6">
+        <div className="md:hidden bg-dark-950/95 backdrop-blur-xl border-b border-neon-lime/5 px-4 sm:px-6 pb-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-gray-400 hover:text-neon-lime transition-colors font-mono text-sm"
+              className="block py-4 text-gray-400 hover:text-neon-lime transition-colors font-mono text-sm min-h-[48px]"
             >
               <span className="text-neon-lime/30 mr-2">&gt;</span>
               {link.label}
@@ -118,7 +119,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
-            className="block mt-3 text-center font-mono font-medium px-5 py-2.5 rounded-lg bg-neon-lime/10 text-neon-lime border border-neon-lime/20"
+            className="block mt-3 text-center font-mono font-medium px-5 py-3 min-h-[48px] rounded-lg bg-neon-lime/10 text-neon-lime border border-neon-lime/20"
           >
             Hire_Me()
           </a>

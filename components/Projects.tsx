@@ -134,7 +134,7 @@ const tagColors: Record<string, { bg: string; text: string; border: string }> = 
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 relative">
+    <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       {/* Section accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-neon-cyan/10 to-transparent" />
 

@@ -63,7 +63,7 @@ const typeColors: Record<string, { bg: string; text: string; border: string; dot
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 relative">
+    <section id="experience" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-neon-lime/10 to-transparent" />
 
       <div className="max-w-4xl mx-auto">

@@ -63,7 +63,7 @@ const projects = [
 
 export default function FullstackProjects() {
   return (
-    <section id="fullstack" className="py-24 px-6 relative">
+    <section id="fullstack" className="py-16 sm:py-24 px-4 sm:px-6 relative">
       {/* Section accent line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-neon-cyan/20 to-transparent" />
 
