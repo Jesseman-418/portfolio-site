@@ -6,9 +6,9 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
-          <span className="gradient-text font-bold text-sm">JM</span>
+          <span className="gradient-text font-bold text-sm">JD</span>
           <span className="text-[10px] text-gray-700 font-mono tracking-wider">
-            &copy; {new Date().getFullYear()} Jesse Man
+            &copy; {new Date().getFullYear()} Jesseman Devamirtham
           </span>
           <span className="text-[10px] text-gray-800 font-mono">·</span>
           <span className="text-[10px] text-gray-700 font-mono tracking-wider">

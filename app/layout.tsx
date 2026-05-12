@@ -18,7 +18,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Jesse Man | Full-Stack Engineer & AI Builder",
+  title: "Jesseman Devamirtham | Full-Stack Engineer & AI Builder",
   description:
     "Full-stack engineer building production web apps with Next.js, TypeScript, Node.js, PostgreSQL, and MongoDB. AI/ML research published in IEEE. I build things that work.",
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "machine learning",
   ],
   openGraph: {
-    title: "Jesse Man | Full-Stack Engineer & AI Builder",
+    title: "Jesseman Devamirtham | Full-Stack Engineer & AI Builder",
     description:
       "Full-stack engineer. AI builder. Ships production apps end-to-end.",
     type: "website",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jesse Man | Full-Stack Engineer & AI Builder",
+    title: "Jesseman Devamirtham | Full-Stack Engineer & AI Builder",
     description:
       "Full-stack engineer. AI builder. Ships production apps end-to-end.",
   },

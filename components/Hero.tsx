@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const codeLines = [
   { text: "const", color: "text-neon-purple" },
-  { text: " jesse", color: "text-neon-cyan" },
+  { text: " jesseman", color: "text-neon-cyan" },
   { text: " = ", color: "text-gray-500" },
   { text: "new", color: "text-neon-purple" },
   { text: " Engineer", color: "text-neon-lime" },
@@ -20,17 +20,16 @@ const codeLines = [
   { text: ",", color: "text-gray-500" },
   { text: "\n  ai", color: "text-neon-cyan" },
   { text: ": ", color: "text-gray-500" },
-  { text: "['PyTorch', 'ViT', 'Agents']", color: "text-neon-lime/80" },
+  { text: "['PyTorch', 'ViT', 'LLM Agents']", color: "text-neon-lime/80" },
   { text: ",", color: "text-gray-500" },
   { text: "\n  security", color: "text-neon-cyan" },
   { text: ": ", color: "text-gray-500" },
   { text: "['OAuth2', 'JWT', 'RBAC']", color: "text-neon-lime/80" },
   { text: ",", color: "text-gray-500" },
-  { text: "\n  status", color: "text-neon-cyan" },
+  { text: "\n  shipping", color: "text-neon-cyan" },
   { text: ": ", color: "text-gray-500" },
-  { text: "'building'", color: "text-neon-lime" },
-  { text: " ", color: "text-gray-500" },
-  { text: "// always", color: "text-gray-600" },
+  { text: "true", color: "text-neon-lime" },
+  { text: ",", color: "text-gray-500" },
   { text: "\n});", color: "text-gray-500" },
 ];
 
@@ -138,47 +137,33 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-lime opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-neon-lime" />
               </span>
-              <span className="tracking-widest uppercase">Open to opportunities</span>
+              <span className="tracking-widest uppercase">Engineering in production</span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-2"
+              className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-2"
             >
-              Hi, I&apos;m{" "}
-              <span className="gradient-text">Jesse</span>
+              <span className="gradient-text">Jesseman</span>{" "}
+              <span className="text-gray-200">Devamirtham</span>
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="mb-6"
+              className="mb-8"
             >
-              <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold">
-                <span className="gradient-text">
-                  Full-Stack
-                </span>
-              </h2>
-              <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.1]">
                 <span className="gradient-text-alt">
-                  Engineer
+                  Full-stack engineer
                 </span>
               </h2>
-            </motion.div>
-
-            {/* Handwritten note */}
-            <motion.div
-              initial={{ opacity: 0, rotate: -3 }}
-              animate={{ opacity: 1, rotate: -2 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-6"
-            >
-              <span className="handwritten text-xl sm:text-2xl text-neon-lime/40">
-                I build things that work ^
-              </span>
+              <p className="text-xl sm:text-2xl text-gray-500 font-light mt-3">
+                Database to deployment. AI-native.
+              </p>
             </motion.div>
 
             <motion.p
@@ -187,8 +172,10 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="text-base sm:text-lg text-gray-500 max-w-xl mb-10 leading-relaxed font-light"
             >
-              Production web apps end-to-end. Database design → REST APIs →
-              responsive React UIs → deployment. Plus AI/ML research published in IEEE.
+              I architect production web systems &mdash; auth servers, API
+              gateways, payment flows, real-time dashboards. Stack: TypeScript,
+              Next.js, Node, PostgreSQL, Redis. Research published in IEEE
+              Xplore on Vision Transformers and adversarial defense.
             </motion.p>
 
             <motion.div
@@ -198,29 +185,35 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-center lg:items-start gap-4"
             >
               <a
-                href="https://www.linkedin.com/in/jesse-man-devamirtham/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#projects"
                 className="group relative w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl bg-neon-lime/10 hover:bg-neon-lime/20 text-neon-lime font-semibold text-lg transition-all border border-neon-lime/20 hover:shadow-[0_0_30px_rgba(0,255,0,0.15)] overflow-hidden flex items-center justify-center"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-neon-lime/5 to-neon-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="relative flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                  Hire Me
-                </span>
-              </a>
-              <a
-                href="#projects"
-                className="w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl glass text-gray-400 hover:text-neon-cyan font-medium text-lg transition-all hover:border-neon-cyan/20 gradient-border group flex items-center justify-center"
-              >
-                <span className="flex items-center gap-2">
-                  View My Work
+                  Selected Work
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </span>
               </a>
+              <a
+                href="https://github.com/Jesseman-418"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl glass text-gray-400 hover:text-neon-cyan font-medium text-lg transition-all hover:border-neon-cyan/20 gradient-border group flex items-center justify-center"
+              >
+                <span className="flex items-center gap-2">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2c-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39s1.98.13 2.9.39c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.7.41.36.78 1.05.78 2.12v3.14c0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+                  </svg>
+                  GitHub
+                </span>
+              </a>
             </motion.div>
+
+            <p className="mt-8 text-xs text-gray-600 font-mono tracking-wider">
+              Currently: B.Tech Computer Science @ VIT Chennai &middot; Final year
+            </p>
           </div>
 
           {/* Right - Code Terminal */}
@@ -242,7 +235,7 @@ export default function Hero() {
                     <div className="w-3 h-3 rounded-full bg-yellow-500/70 hover:bg-yellow-500 transition-colors" />
                     <div className="w-3 h-3 rounded-full bg-green-500/70 hover:bg-green-500 transition-colors" />
                   </div>
-                  <span className="text-[10px] text-gray-600 ml-2 font-mono tracking-wider">~/jesse/portfolio</span>
+                  <span className="text-[10px] text-gray-600 ml-2 font-mono tracking-wider">~/jesseman/portfolio</span>
                   <div className="ml-auto flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-neon-lime/50" />
                     <span className="text-[10px] text-gray-700 font-mono">node v22</span>
@@ -288,14 +281,14 @@ export default function Hero() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="absolute -left-4 bottom-16 px-3 py-1.5 rounded-lg bg-dark-800/80 border border-neon-purple/20 text-[10px] font-mono text-neon-purple/70 backdrop-blur"
               >
-                $30K Hackathon
+                Scaler × Meta finalist
               </motion.div>
               <motion.div
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 className="absolute -right-2 bottom-4 px-3 py-1.5 rounded-lg bg-dark-800/80 border border-neon-lime/20 text-[10px] font-mono text-neon-lime/70 backdrop-blur"
               >
-                12+ Projects
+                Shipping production
               </motion.div>
             </div>
           </motion.div>
@@ -308,8 +301,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto lg:mx-0"
         >
-          <AnimatedCounter value="12+" label="Projects Shipped" />
-          <AnimatedCounter value="5+" label="Full-Stack Apps" />
+          <AnimatedCounter value="12+" label="Production Apps" />
+          <AnimatedCounter value="5" label="Full-Stack Systems" />
           <AnimatedCounter value="IEEE" label="Published Research" />
           <AnimatedCounter value="$30K" label="Hackathon Pool" />
         </motion.div>

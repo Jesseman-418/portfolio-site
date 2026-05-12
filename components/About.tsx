@@ -20,10 +20,10 @@ export default function About() {
             {"// "}About
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-2">
-            Full-stack engineer who
+            I architect systems
           </h2>
           <h2 className="text-3xl sm:text-4xl font-bold">
-            <span className="gradient-text text-glow-lime">ships end-to-end</span>
+            <span className="gradient-text text-glow-lime">end to end</span>
           </h2>
         </motion.div>
 
@@ -46,40 +46,51 @@ export default function About() {
 
             <div className="space-y-6 text-gray-400 leading-relaxed text-base sm:text-lg">
               <p>
-                Final-year B.Tech Computer Science student at VIT Chennai
-                who builds{" "}
+                Full-stack engineer.{" "}
                 <span className="text-neon-lime/80 font-medium">
-                  production web applications from database to deployment
-                </span>
-                . Stack: TypeScript, Next.js, Node.js, SQL + NoSQL.
+                  I design and ship production web systems
+                </span>{" "}
+                from schema design through deployment &mdash; not just CRUD
+                wrappers, but auth servers, API gateways, and real-time data
+                pipelines that hold up in prod.
               </p>
               <p>
-                Built{" "}
+                Stack discipline:{" "}
                 <span className="text-neon-cyan/80 font-medium">
-                  full-stack apps with auth systems, REST APIs, payment tracking,
-                  and real-time dashboards
-                </span>
-                . JWT auth from scratch, OAuth 2.0 servers, API gateways
-                with rate limiting, Prisma + Mongoose schemas.
+                  TypeScript on Next.js for the front, Node + Express or FastAPI
+                  for the back, PostgreSQL + Redis for state, Prisma for the
+                  schema layer.
+                </span>{" "}
+                Auth done right &mdash; JWT, OAuth 2.0, RBAC. Rate-limited APIs
+                behind a gateway. Containerized deploys to Vercel + Docker.
               </p>
               <p>
-                Published research in{" "}
-                <span className="text-neon-purple/80 font-medium">IEEE Xplore</span>.
-                Built AI environments for{" "}
+                AI-native by default. Published research in{" "}
+                <span className="text-neon-purple/80 font-medium">
+                  IEEE Xplore
+                </span>{" "}
+                on Vision Transformer activation functions and adversarial
+                defense in multi-agent reinforcement learning. Built a data
+                cleaning AI environment for{" "}
                 <span className="text-neon-lime/80 font-medium">
-                  Meta &amp; Scaler ($30K prize pool)
-                </span>.
-                PyTorch for ML research. I operate fast and ship working software.
+                  Scaler &times; Meta&apos;s $30K AI Olympics
+                </span>
+                . I use PyTorch + Hugging Face + LLM APIs as default tooling,
+                not buzzwords.
+              </p>
+              <p>
+                I work fast, write clean code, and care about the parts most
+                portfolios skip: data integrity, edge cases, deploy reliability.
               </p>
             </div>
 
             {/* Info grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 pt-8 border-t border-white/5">
               {[
-                { label: "University", value: "VIT Chennai", color: "text-neon-lime" },
-                { label: "Degree", value: "B.Tech CSE", color: "text-neon-cyan" },
-                { label: "Focus", value: "Full-Stack + AI", color: "text-neon-purple" },
-                { label: "Location", value: "India", color: "text-neon-lime" },
+                { label: "Discipline", value: "Full-Stack + AI", color: "text-neon-lime" },
+                { label: "Stack", value: "TS / Next / Node", color: "text-neon-cyan" },
+                { label: "Research", value: "IEEE Published", color: "text-neon-purple" },
+                { label: "Based In", value: "Chennai, India", color: "text-neon-lime" },
               ].map((item) => (
                 <div key={item.label} className="text-center group">
                   <div className={`text-sm font-semibold ${item.color}/80 font-mono`}>
@@ -92,7 +103,7 @@ export default function About() {
 
             {/* Credential badges */}
             <div className="flex flex-wrap justify-center gap-3 mt-8">
-              {["IEEE Published", "VIT Chennai", "$30K Hackathon", "12+ Projects", "Full-Stack"].map((badge) => (
+              {["IEEE Published", "Scaler × Meta", "12+ Production Apps", "Auth Server From Scratch", "VIT Chennai"].map((badge) => (
                 <span key={badge} className="px-3 py-1 rounded-full text-[10px] font-mono tracking-wider text-gray-500 bg-white/[0.02] border border-white/5 hover:border-neon-lime/10 hover:text-neon-lime/50 transition-all">
                   {badge}
                 </span>
