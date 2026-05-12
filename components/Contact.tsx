@@ -59,7 +59,7 @@ export default function Contact() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <a
-                href="https://www.linkedin.com/in/jesse-man-devamirtham/"
+                href="https://www.linkedin.com/in/njd-jesse/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl bg-neon-lime/10 hover:bg-neon-lime/20 text-neon-lime font-semibold text-lg transition-all border border-neon-lime/20 hover:shadow-[0_0_30px_rgba(0,255,0,0.15)] flex items-center justify-center gap-2 overflow-hidden"

@@ -76,7 +76,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://www.linkedin.com/in/jesse-man-devamirtham/"
+            href="https://www.linkedin.com/in/njd-jesse/"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-3 text-xs font-mono font-medium px-5 py-2.5 rounded-lg bg-neon-lime/10 hover:bg-neon-lime/20 text-neon-lime border border-neon-lime/20 transition-all hover:shadow-[0_0_20px_rgba(0,255,0,0.15)] tracking-wider uppercase"
@@ -115,7 +115,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://www.linkedin.com/in/jesse-man-devamirtham/"
+            href="https://www.linkedin.com/in/njd-jesse/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
