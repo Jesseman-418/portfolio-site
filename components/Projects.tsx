@@ -24,13 +24,13 @@ const cases = [
   {
     n: "03",
     title: "Contact Tracing with Ball-Tree",
-    summary: "IEEE-published research on geospatial contact tracing using ball-tree nearest-neighbor structures — sub-linear lookup for COVID-scale datasets.",
+    summary: "Undergrad research project published in IEEE Xplore — geospatial contact tracing using ball-tree nearest-neighbor structures, sub-linear lookup for COVID-scale datasets.",
     problem: "Standard contact tracing queries scale O(n²) on naive distance checks. At 10M+ event pairs, that breaks.",
     solution: "Implemented ball-tree indexing over haversine distance, benchmarked against brute force + k-d tree, published the comparison and complexity proof in IEEE Xplore.",
     stack: ["Python", "scikit-learn", "NumPy", "Pandas", "Jupyter"],
     github: "https://github.com/Jesseman-418/Contact-Tracing-using-Ball-tree-Algorithm",
     live: null,
-    tag: "Research · IEEE",
+    tag: "Student · IEEE paper",
   },
   {
     n: "04",
@@ -46,13 +46,13 @@ const cases = [
   {
     n: "05",
     title: "Adversarial Defense in Multi-Agent RL",
-    summary: "Capstone research on adversarial robustness in cooperative multi-agent reinforcement learning. Defended a centralized critic against gradient-based attacks.",
+    summary: "Coursework research project on adversarial robustness in cooperative multi-agent reinforcement learning. Defended a centralized critic against gradient-based attacks.",
     problem: "Cooperative MARL agents are brittle under adversarial perturbation. Most defenses target single-agent RL and don't transfer.",
     solution: "Adapted projected gradient descent + adversarial training to the centralized-critic case, ran 30 experiments, documented attack-success-rate reduction.",
     stack: ["PyTorch", "Stable-Baselines3", "Gymnasium", "Weights & Biases"],
     github: "https://github.com/Jesseman-418/Adversarial-Attack-defense-using-MARL-approach",
     live: null,
-    tag: "Research",
+    tag: "Student project",
   },
   {
     n: "06",

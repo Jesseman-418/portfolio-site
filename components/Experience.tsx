@@ -21,17 +21,10 @@ const timeline = [
     href: null,
   },
   {
-    when: "2023 — Present",
-    role: "Researcher",
-    org: "VIT Chennai",
-    what: "Vision Transformer activation function comparison + adversarial defense in multi-agent reinforcement learning. IEEE Xplore publication, capstone in progress.",
-    href: null,
-  },
-  {
     when: "2022 — 2026",
     role: "B.Tech Computer Science",
     org: "VIT Chennai",
-    what: "Final year. Focus on systems, distributed computing, and applied ML.",
+    what: "Final year. Focus on systems, distributed computing, and applied ML. Published one paper in IEEE Xplore during undergrad on geospatial contact tracing with ball-tree indexing. Capstone in progress on Vision Transformer activation functions.",
     href: null,
   },
 ];

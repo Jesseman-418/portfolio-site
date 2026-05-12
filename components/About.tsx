@@ -28,10 +28,11 @@ export default function About() {
             </p>
 
             <p>
-              AI-native by default. Vision Transformer activation research
-              published in IEEE Xplore. Adversarial defense in multi-agent
-              RL as my capstone. PyTorch + Hugging Face + LLM APIs as
-              default tooling, not buzzwords.
+              AI-native by default. Published one IEEE Xplore paper during
+              undergrad on geospatial contact tracing with ball-tree indexing.
+              Capstone in progress on Vision Transformer activation functions.
+              PyTorch + Hugging Face + LLM APIs as default tooling, not
+              buzzwords.
             </p>
 
             <p className="text-ink/60 pt-2">
