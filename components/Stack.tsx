@@ -2,7 +2,7 @@ const stack = [
   {
     n: "01",
     category: "Web",
-    desc: "Production web interfaces, end to end. App Router patterns, type-safe data flow, Web3 wallet integration, edge runtimes.",
+    desc: "Production web applications, end to end. App Router patterns, type-safe data flow, Web3 wallet integration, edge runtimes.",
     primary: ["TypeScript", "React", "Next.js (App Router)"],
     secondary: ["Tailwind CSS", "Framer Motion", "ethers.js / MetaMask", "Radix UI", "shadcn/ui"],
   },
@@ -58,8 +58,8 @@ export default function Stack() {
               <span className="text-cobalt">.</span>
             </h2>
             <p className="text-lg text-ink/70 max-w-xl">
-              No skill bars. No percentages. Just what I reach for in
-              production, with a line on{" "}
+              The full stack &mdash; front to back. No skill bars, no
+              percentages. Just what I reach for in production, with a line on{" "}
               <em className="italic">why</em>.
             </p>
           </div>

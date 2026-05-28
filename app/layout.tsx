@@ -21,33 +21,36 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jesseman Devamirtham — Frontend Engineer",
+  title: "Jesseman Devamirtham — Full-Stack Engineer",
   description:
-    "Frontend engineer building high-performance React and Next.js interfaces — Web3 wallet integrations, real-time dashboards, type-safe systems. Based in Chennai.",
+    "Full-stack engineer in Chennai. I design and ship complete production systems — React/Next.js front ends, Node & FastAPI back ends, Postgres data layers, Web3 wallet flows. AI/ML research published in IEEE Xplore.",
   keywords: [
-    "frontend engineer",
+    "full-stack engineer",
     "Jesseman Devamirtham",
     "React developer",
     "Next.js",
     "TypeScript",
-    "Web3 frontend",
-    "wallet integration",
-    "Solana",
+    "Node.js",
+    "FastAPI",
+    "PostgreSQL",
+    "Web3",
     "ethers.js",
+    "AI engineer",
+    "IEEE researcher",
     "software engineer India",
   ],
   openGraph: {
-    title: "Jesseman Devamirtham — Frontend Engineer",
+    title: "Jesseman Devamirtham — Full-Stack Engineer",
     description:
-      "High-performance React and Next.js interfaces. Web3 wallet flows, real-time dashboards, type-safe systems.",
+      "I design and ship complete production systems. Front to back, schema to deploy. Web3 + AI-native.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jesseman Devamirtham — Frontend Engineer",
+    title: "Jesseman Devamirtham — Full-Stack Engineer",
     description:
-      "High-performance React and Next.js interfaces. Web3 wallet flows, real-time dashboards, type-safe systems.",
+      "I design and ship complete production systems. Front to back, schema to deploy. Web3 + AI-native.",
   },
   robots: { index: true, follow: true },
 };

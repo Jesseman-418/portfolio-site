@@ -20,10 +20,10 @@ export default function Hero() {
         <div className="grid md:grid-cols-12 gap-8 md:gap-12 max-w-5xl mt-12">
           <div className="md:col-span-7 md:col-start-2">
             <p className="text-xl md:text-2xl text-ink/80 leading-snug font-light">
-              Frontend engineer in Chennai. I build production React and
-              Next.js interfaces &mdash; Web3 wallet flows, real-time
-              dashboards, high-performance UIs &mdash; and ship the full stack
-              behind them when it counts.
+              Full-stack engineer in Chennai. I design and ship complete
+              production systems &mdash; React and Next.js front ends, Node and
+              FastAPI back ends, PostgreSQL data layers, auth from primitives,
+              and Web3 wallet flows. Front to back, schema to deploy.
             </p>
           </div>
 
