@@ -21,32 +21,33 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jesseman Devamirtham — Full-Stack Engineer",
+  title: "Jesseman Devamirtham — Frontend Engineer",
   description:
-    "Full-stack engineer in Chennai. I design and ship production web systems — database schema to deployment. AI/ML research published in IEEE Xplore.",
+    "Frontend engineer building high-performance React and Next.js interfaces — Web3 wallet integrations, real-time dashboards, type-safe systems. Based in Chennai.",
   keywords: [
-    "full-stack engineer",
+    "frontend engineer",
     "Jesseman Devamirtham",
-    "software engineer India",
+    "React developer",
     "Next.js",
     "TypeScript",
-    "Node.js",
-    "PostgreSQL",
-    "AI engineer",
-    "IEEE researcher",
+    "Web3 frontend",
+    "wallet integration",
+    "Solana",
+    "ethers.js",
+    "software engineer India",
   ],
   openGraph: {
-    title: "Jesseman Devamirtham — Full-Stack Engineer",
+    title: "Jesseman Devamirtham — Frontend Engineer",
     description:
-      "I design and ship production web systems. Database schema to deployment. AI-native.",
+      "High-performance React and Next.js interfaces. Web3 wallet flows, real-time dashboards, type-safe systems.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jesseman Devamirtham — Full-Stack Engineer",
+    title: "Jesseman Devamirtham — Frontend Engineer",
     description:
-      "I design and ship production web systems. Database schema to deployment. AI-native.",
+      "High-performance React and Next.js interfaces. Web3 wallet flows, real-time dashboards, type-safe systems.",
   },
   robots: { index: true, follow: true },
 };

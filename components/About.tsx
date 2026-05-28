@@ -14,16 +14,17 @@ export default function About() {
             </p>
 
             <p>
-              Not CRUD wrappers — auth servers built from primitives, API
-              gateways with rate-limited token introspection, real-time data
-              pipelines that hold up in prod. The unglamorous parts most
-              portfolios skip: data integrity, edge cases, deploy reliability.
+              Frontend that holds up in production — wallet-connected flows,
+              real-time dashboards, drag-and-drop interfaces, sub-second loads.
+              The unglamorous parts most portfolios skip: loading and error
+              states, edge cases, render performance, accessibility.
             </p>
 
             <p>
-              Stack discipline: TypeScript on Next.js for the front end,
-              Node or FastAPI for the back, PostgreSQL with Prisma for the
-              schema layer, Redis for state. JWT, OAuth 2.0, RBAC done right.
+              Stack discipline: TypeScript on Next.js (App Router) at the
+              front, Web3 via ethers.js and MetaMask, and the full stack
+              behind it when it counts — Node or FastAPI, PostgreSQL with
+              Prisma, Redis. Auth and rate limiting in the right layer.
               Containerized deploys.
             </p>
 
@@ -49,9 +50,9 @@ export default function About() {
             <div>
               <div className="num-marker mb-2">Discipline</div>
               <div className="text-ink/80">
-                Full-stack engineering
+                Frontend engineering
                 <br />
-                <span className="text-ink/50">+ Applied AI/ML research</span>
+                <span className="text-ink/50">+ full-stack &amp; applied ML</span>
               </div>
             </div>
             <div>

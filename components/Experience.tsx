@@ -2,9 +2,9 @@ const timeline = [
   {
     when: "2026 — Present",
     role: "Founder",
-    org: "Quiet Engine",
-    what: "Done-for-you product build + email engine for creators with audience. Three service tiers, $0–$2K/mo entry, rev-share upside on built products.",
-    href: "https://quiet-engine.vercel.app",
+    org: "Stratum",
+    what: "Custom AI operating systems for solo operators — Claude Code workspaces with skills, commands, hooks, and automations, governed by one config. One-time builds across four tiers.",
+    href: "https://stratum-three.vercel.app",
   },
   {
     when: "Summer 2025",

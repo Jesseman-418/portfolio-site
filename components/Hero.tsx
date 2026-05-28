@@ -20,18 +20,10 @@ export default function Hero() {
         <div className="grid md:grid-cols-12 gap-8 md:gap-12 max-w-5xl mt-12">
           <div className="md:col-span-7 md:col-start-2">
             <p className="text-xl md:text-2xl text-ink/80 leading-snug font-light">
-              Full-stack engineer in Chennai. I design and ship production web
-              systems &mdash; schema design to deployment, auth servers to API
-              gateways, with a research line running through{" "}
-              <a
-                href="https://ieeexplore.ieee.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ink-link"
-              >
-                IEEE-published
-              </a>{" "}
-              vision transformer work.
+              Frontend engineer in Chennai. I build production React and
+              Next.js interfaces &mdash; Web3 wallet flows, real-time
+              dashboards, high-performance UIs &mdash; and ship the full stack
+              behind them when it counts.
             </p>
           </div>
 
@@ -49,7 +41,7 @@ export default function Hero() {
           <div className="md:col-span-4 md:col-start-2">
             <div className="num-marker mb-2">Selected Work</div>
             <a href="#work" className="display-text text-2xl ink-link">
-              Six case studies →
+              Five case studies →
             </a>
           </div>
           <div className="md:col-span-3">

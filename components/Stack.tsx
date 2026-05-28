@@ -2,9 +2,9 @@ const stack = [
   {
     n: "01",
     category: "Web",
-    desc: "Production web applications, end to end. App Router patterns, type-safe data flow, edge runtimes.",
+    desc: "Production web interfaces, end to end. App Router patterns, type-safe data flow, Web3 wallet integration, edge runtimes.",
     primary: ["TypeScript", "React", "Next.js (App Router)"],
-    secondary: ["Tailwind CSS", "Framer Motion", "Radix UI", "shadcn/ui"],
+    secondary: ["Tailwind CSS", "Framer Motion", "ethers.js / MetaMask", "Radix UI", "shadcn/ui"],
   },
   {
     n: "02",

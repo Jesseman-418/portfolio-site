@@ -54,14 +54,14 @@ export default function Contact() {
                 </a>
               </li>
               <li className="flex items-baseline gap-6">
-                <span className="num-marker text-paper-300">Agency</span>
+                <span className="num-marker text-paper-300">Studio</span>
                 <a
-                  href="https://quiet-engine.vercel.app"
+                  href="https://stratum-three.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-paper hover:text-cobalt-400 underline decoration-paper/30 decoration-1 underline-offset-4 transition-colors"
                 >
-                  quiet-engine.vercel.app ↗
+                  stratum-three.vercel.app ↗
                 </a>
               </li>
             </ul>
