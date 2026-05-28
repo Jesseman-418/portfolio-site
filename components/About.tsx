@@ -4,7 +4,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="grid md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-2">
-            <span className="num-marker">03 — About</span>
+            <span className="num-marker">02 — About</span>
           </div>
 
           <div className="md:col-span-6 space-y-7 text-lg leading-relaxed text-ink/85">

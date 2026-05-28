@@ -62,7 +62,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="grid md:grid-cols-12 gap-8 mb-24">
           <div className="md:col-span-2">
-            <span className="num-marker">02</span>
+            <span className="num-marker">04</span>
           </div>
           <div className="md:col-span-7">
             <h2 className="display-text text-5xl md:text-7xl leading-[0.95] mb-6">

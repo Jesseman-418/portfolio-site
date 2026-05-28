@@ -49,7 +49,7 @@ export default function Stack() {
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="grid md:grid-cols-12 gap-8 mb-20">
           <div className="md:col-span-2">
-            <span className="num-marker">04 — Stack</span>
+            <span className="num-marker">03 — Stack</span>
           </div>
           <div className="md:col-span-8">
             <h2 className="display-text text-5xl md:text-6xl leading-[0.95] mb-6">
