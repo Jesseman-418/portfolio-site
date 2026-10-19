@@ -1,59 +1,71 @@
 const cases = [
   {
-    n: "01",
-    title: "PollChain",
-    summary: "Decentralized voting dApp with MetaMask wallet auth, live on-chain vote counting, and a no-wallet demo mode. Six routes, animated real-time results.",
-    problem: "Web3 UX is the wall most users hit — wallet connection, transaction states, and on-chain latency break the interface if the frontend isn't built for them.",
-    solution: "Built the full frontend in Next.js 14 + TypeScript: ethers.js wallet integration, React Context for chain state, animated progress bars driven by live vote data, and a demo fallback so anyone can explore without a wallet.",
-    stack: ["Next.js 14", "React", "TypeScript", "ethers.js", "MetaMask", "Tailwind"],
-    github: "https://github.com/Jesseman-418/Pollchain-frontend",
-    live: "https://pollchain-frontend.vercel.app",
-    tag: "Web3 · dApp",
+    "n": "01",
+    "title": "Zero-Trust API Gateway",
+    "summary": "An identity-aware reverse proxy that checks who is calling, what they can access, and how much traffic they can send.",
+    "problem": "Upstream services need consistent access control and resilience when dependencies become unhealthy.",
+    "solution": "Implemented JWT/JWKS authentication, RBAC and ABAC policies, per-user rate limits, circuit breakers, health checks, and request/error metrics. Added 25 automated tests for authentication, policies, and proxy behavior.",
+    "stack": [
+      "Node.js",
+      "Express",
+      "JWT / JWKS",
+      "RBAC / ABAC"
+    ],
+    "github": "https://github.com/Jesseman-418/zero-trust-api-gateway",
+    "live": null,
+    "tag": "API security · 25 tests"
   },
   {
-    n: "02",
-    title: "TaskFlow",
-    summary: "Full-stack Kanban board with native drag-and-drop, multi-board management, and type-safe server-driven mutations. Strict-mode TypeScript throughout.",
-    problem: "Drag-and-drop boards get janky fast — optimistic UI, persistence, and re-render control fight each other once state grows.",
-    solution: "Built on Next.js 14 App Router with Server Actions for every mutation, native HTML5 drag-and-drop, a priority/label/due-date task model, search + filter, and Prisma migrations. No client-state library — server actions keep it type-safe end to end.",
-    stack: ["Next.js 14", "TypeScript (strict)", "Server Actions", "Prisma", "SQLite", "Tailwind"],
-    github: "https://github.com/Jesseman-418/taskflow",
-    live: null,
-    tag: "Interactive UI",
+    "n": "02",
+    "title": "OAuth 2.0 Authorization Server",
+    "summary": "An OAuth 2.0 and OpenID Connect server with authorization-code and client-credentials flows, PKCE, and signed tokens.",
+    "problem": "Token issuance and renewal need explicit safeguards against interception and refresh-token reuse.",
+    "solution": "Built PKCE verification, signed tokens, refresh-token rotation and reuse detection, with routes, middleware, and database operations separated into modules. Covered flows with 53 automated tests.",
+    "stack": [
+      "Node.js",
+      "Express",
+      "SQLite",
+      "OAuth 2.0 / OIDC",
+      "PKCE"
+    ],
+    "github": "https://github.com/Jesseman-418/oauth2-authorization-server",
+    "live": null,
+    "tag": "Identity · 53 tests"
   },
   {
-    n: "03",
-    title: "NexusFlow AI",
-    summary: "High-performance marketing + onboarding site for an AI workflow platform. Lighthouse 98 / 100 / 100 / 100, custom animation system, type-safe content layer.",
-    problem: "Client needed an enterprise-grade, founder-facing site that loads instantly and holds up under scrutiny — shipped in under two weeks.",
-    solution: "Next.js App Router with a type-safe content layer, a hand-built Framer Motion animation system, and ICP-tuned copy. Tuned to a near-perfect Lighthouse score across all four axes.",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Vercel"],
-    github: "https://github.com/Jesseman-418/nexusflow-ai",
-    live: "https://nexusflow-ai.vercel.app",
-    tag: "Performance",
+    "n": "03",
+    "title": "DocQA-AI",
+    "summary": "Ask questions across PDF, text, and Markdown documents, with retrieved passages and source citations.",
+    "problem": "Finding an answer in a collection of documents should preserve the source context and work without a hosted model.",
+    "solution": "Built ingestion, paragraph-aware chunking, 384-dimensional sentence embeddings, and persistent FAISS search. Extractive answers run locally; optional OpenAI synthesis adds generative answers. Tested chunking, retrieval, and answer generation with pytest.",
+    "stack": [
+      "Python",
+      "FAISS",
+      "Streamlit",
+      "sentence-transformers",
+      "pytest"
+    ],
+    "github": "https://github.com/Jesseman-418/docqa-ai",
+    "live": null,
+    "tag": "Applied AI · Retrieval"
   },
   {
-    n: "04",
-    title: "VitalEdge Fitness",
-    summary: "Coaching SaaS with client dashboards, programming, and Stripe payment flows. Built solo, end to end — the premium-user systems a token economy needs, minus the chain.",
-    problem: "Client ran the whole business on DMs, Google Docs, and Stripe payment links. No dashboard, no billing logic, no source of truth.",
-    solution: "Built the full product: typed dashboards for clients and programs, Stripe Connect split payments, scheduled reminder jobs, and a Prisma schema that won't bite in month six.",
-    stack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Stripe", "Vercel"],
-    github: "https://github.com/Jesseman-418/vitaledge-fitness",
-    live: "https://vitaledge-fitness.vercel.app",
-    tag: "Dashboards · Payments",
-  },
-  {
-    n: "05",
-    title: "Kaval",
-    summary: "Shipped production frontend for an AI digital-safety agent that sits between the user and the internet. Built on the latest Next.js, live in production.",
-    problem: "A new AI product needs a frontend that explains an unfamiliar concept fast and converts — on a bleeding-edge Next.js with breaking API changes.",
-    solution: "Built the production site on Next.js 16 App Router, reading the framework's own docs to ship against APIs newer than most tooling supports. Clean, fast, conversion-tuned.",
-    stack: ["Next.js 16", "React", "TypeScript", "Tailwind", "Vercel"],
-    github: "https://github.com/Jesseman-418/kaval",
-    live: "https://kaval.chat",
-    tag: "Product",
-  },
+    "n": "04",
+    "title": "Meridius AI",
+    "summary": "A website studio portfolio showcasing eight distinct niche website demos, from hospitality to fitness and home services.",
+    "problem": "Different local businesses need a visual identity and browsing experience tailored to their audience.",
+    "solution": "Built a static HTML, CSS, and JavaScript showcase with optimized WebP imagery and individual Vercel deployments. Demo forms prepare local briefs or demonstrate interactions; they do not send enquiries.",
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "WebP",
+      "Vercel"
+    ],
+    "github": "https://github.com/Jesseman-418/meridius-ai",
+    "live": "https://meridius-ai.vercel.app",
+    "tag": "Web design · Showcase"
+  }
 ];
 
 export default function Projects() {
@@ -69,9 +81,9 @@ export default function Projects() {
               Selected work<span className="text-cobalt">.</span>
             </h2>
             <p className="text-lg text-ink/70 max-w-xl leading-snug">
-              Five builds across Web3, real-time interfaces, and production
-              frontends — wallet integration, server-driven state, sub-second
-              loads. Each one shipped.
+              Selected GitHub projects across API security, identity, document
+              retrieval, and web design. Explore the implementation, tests,
+              and setup in each repository.
             </p>
           </div>
         </div>

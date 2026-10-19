@@ -21,37 +21,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jesseman Devamirtham — Full-Stack Engineer",
-  description:
-    "Full-stack engineer in Chennai. I design and ship complete production systems — React/Next.js front ends, Node & FastAPI back ends, Postgres data layers, Web3 wallet flows. AI/ML research published in IEEE Xplore.",
-  keywords: [
-    "full-stack engineer",
-    "Jesseman Devamirtham",
-    "React developer",
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "FastAPI",
-    "PostgreSQL",
-    "Web3",
-    "ethers.js",
-    "AI engineer",
-    "IEEE researcher",
-    "software engineer India",
-  ],
+  title: "Jesseman Devamirtham N — Software Engineer",
+  description: "Software engineer in Chennai building backend services, full-stack applications, and AI automation. VIT Chennai graduate, former Hyundai Motor India intern, and IEEE Xplore first author.",
+  keywords: ["Jesseman Devamirtham", "software engineer", "backend", "full-stack", "AI applications", "Python", "Node.js", "React", "Chennai"],
   openGraph: {
-    title: "Jesseman Devamirtham — Full-Stack Engineer",
-    description:
-      "I design and ship complete production systems. Front to back, schema to deploy. Web3 + AI-native.",
-    type: "website",
-    locale: "en_US",
+    title: "Jesseman Devamirtham N — Software Engineer",
+    description: "Backend, full-stack & AI applications. Explore API security, identity, document retrieval, and web projects.",
+    type: "website", locale: "en_US",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Jesseman Devamirtham — Full-Stack Engineer",
-    description:
-      "I design and ship complete production systems. Front to back, schema to deploy. Web3 + AI-native.",
-  },
+  twitter: { card: "summary", title: "Jesseman Devamirtham N — Software Engineer", description: "Backend, full-stack & AI applications. Chennai, India." },
   robots: { index: true, follow: true },
 };
 

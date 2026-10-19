@@ -1,46 +1,67 @@
 const stack = [
   {
-    n: "01",
-    category: "Web",
-    desc: "Production web applications, end to end. App Router patterns, type-safe data flow, Web3 wallet integration, edge runtimes.",
-    primary: ["TypeScript", "React", "Next.js (App Router)"],
-    secondary: ["Tailwind CSS", "Framer Motion", "ethers.js / MetaMask", "Radix UI", "shadcn/ui"],
+    "n": "01",
+    "category": "Applications",
+    "desc": "Building interfaces and the APIs behind them.",
+    "primary": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js"
+    ],
+    "secondary": [
+      "Node.js",
+      "Express",
+      "FastAPI",
+      "REST APIs"
+    ]
   },
   {
-    n: "02",
-    category: "Backend",
-    desc: "Schema-first APIs. REST and GraphQL where each fits. Strong opinions on error handling and observability.",
-    primary: ["Node.js", "Express", "Python / FastAPI"],
-    secondary: ["REST", "GraphQL", "WebSockets", "Webhook handlers"],
+    "n": "02",
+    "category": "Data & retrieval",
+    "desc": "Relational data and semantic search for document applications.",
+    "primary": [
+      "SQL",
+      "PostgreSQL",
+      "SQLite"
+    ],
+    "secondary": [
+      "FAISS",
+      "Sentence embeddings",
+      "Python"
+    ]
   },
   {
-    n: "03",
-    category: "Data",
-    desc: "Schema design that won't bite you in month 6. Indexes where they matter, denormalize where it pays.",
-    primary: ["PostgreSQL", "MongoDB", "Redis"],
-    secondary: ["Prisma ORM", "Mongoose", "Drizzle", "Pinecone (vector)"],
+    "n": "03",
+    "category": "Identity & access",
+    "desc": "Explicit authentication, authorization, and service protection.",
+    "primary": [
+      "OAuth 2.0",
+      "OpenID Connect",
+      "JWT / JWKS"
+    ],
+    "secondary": [
+      "PKCE",
+      "RBAC / ABAC",
+      "Rate limiting"
+    ]
   },
   {
-    n: "04",
-    category: "Auth & security",
-    desc: "Auth servers from primitives. JWT and OAuth 2.0 done right. Rate limiting in the right layer.",
-    primary: ["OAuth 2.0", "JWT", "NextAuth.js"],
-    secondary: ["RBAC", "ABAC", "API gateway design", "Rate limiting"],
-  },
-  {
-    n: "05",
-    category: "AI / ML",
-    desc: "Research-grade PyTorch. LLM APIs for production. ViT, MARL, adversarial training as default frameworks.",
-    primary: ["PyTorch", "LLM APIs (Claude, OpenAI)", "Hugging Face"],
-    secondary: ["Vision Transformers", "Multi-agent RL", "Gradio", "LangChain"],
-  },
-  {
-    n: "06",
-    category: "Infrastructure",
-    desc: "Containerized deploys to Vercel and beyond. CI that actually catches things. Observability before it's a fire.",
-    primary: ["Docker", "Vercel", "GitHub Actions"],
-    secondary: ["Linux", "Sentry", "Microservices", "Edge functions"],
-  },
+    "n": "04",
+    "category": "Development & testing",
+    "desc": "Repeatable workflows and automated checks for application behavior.",
+    "primary": [
+      "Git",
+      "Docker",
+      "pytest",
+      "Playwright"
+    ],
+    "secondary": [
+      "Java",
+      "Claude Code",
+      "Codex"
+    ]
+  }
 ];
 
 export default function Stack() {
@@ -58,9 +79,8 @@ export default function Stack() {
               <span className="text-cobalt">.</span>
             </h2>
             <p className="text-lg text-ink/70 max-w-xl">
-              The full stack &mdash; front to back. No skill bars, no
-              percentages. Just what I reach for in production, with a line on{" "}
-              <em className="italic">why</em>.
+              The technologies behind my projects, from application code
+              and data storage to API security and automated testing.
             </p>
           </div>
         </div>
@@ -75,7 +95,7 @@ export default function Stack() {
               <p className="text-ink/70 mb-6 leading-relaxed">{s.desc}</p>
 
               <div className="mb-4">
-                <div className="num-marker mb-2">Daily</div>
+                <div className="num-marker mb-2">Core</div>
                 <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
                   {s.primary.map((t) => (
                     <li
@@ -89,7 +109,7 @@ export default function Stack() {
               </div>
 
               <div>
-                <div className="num-marker mb-2">Shipped</div>
+                <div className="num-marker mb-2">Also used</div>
                 <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
                   {s.secondary.map((t) => (
                     <li key={t} className="text-sm font-mono text-ink/55">

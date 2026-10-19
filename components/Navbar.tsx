@@ -8,7 +8,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
-    window.addEventListener("scroll", onScroll);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -57,7 +58,9 @@ export default function Navbar() {
         <button
           onClick={() => setMobileOpen((v) => !v)}
           className="md:hidden text-ink"
-          aria-label="Menu"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileOpen ? (
@@ -70,7 +73,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-paper border-b border-ink/5 px-6 py-6 space-y-4">
+        <div id="mobile-navigation" className="md:hidden bg-paper border-b border-ink/5 px-6 py-6 space-y-4">
           {links.map((l) => (
             <a
               key={l.href}

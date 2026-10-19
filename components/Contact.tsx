@@ -16,13 +16,13 @@ export default function Contact() {
             </h2>
 
             <p className="text-xl md:text-2xl text-paper/80 max-w-2xl mb-16 leading-snug font-light">
-              Open to full-time engineering roles starting mid-2026, and
-              selective client builds in the interim. The fastest path is
-              email.
+              For software engineering opportunities or a conversation about
+              backend systems, full-stack applications, and AI automation,
+              email is the best place to reach me.
             </p>
 
             <ul className="space-y-5 text-lg">
-              <li className="flex items-baseline gap-6">
+              <li className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 break-all">
                 <span className="num-marker text-paper-300">Email</span>
                 <a
                   href="mailto:njessemandevamirtham@gmail.com"
@@ -31,7 +31,7 @@ export default function Contact() {
                   njessemandevamirtham@gmail.com
                 </a>
               </li>
-              <li className="flex items-baseline gap-6">
+              <li className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 break-all">
                 <span className="num-marker text-paper-300">GitHub</span>
                 <a
                   href="https://github.com/Jesseman-418"
@@ -42,7 +42,7 @@ export default function Contact() {
                   github.com/Jesseman-418 ↗
                 </a>
               </li>
-              <li className="flex items-baseline gap-6">
+              <li className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 break-all">
                 <span className="num-marker text-paper-300">LinkedIn</span>
                 <a
                   href="https://www.linkedin.com/in/njd-jesse/"
@@ -53,15 +53,15 @@ export default function Contact() {
                   linkedin.com/in/njd-jesse ↗
                 </a>
               </li>
-              <li className="flex items-baseline gap-6">
+              <li className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 break-all">
                 <span className="num-marker text-paper-300">Studio</span>
                 <a
-                  href="https://stratum-three.vercel.app"
+                  href="https://meridius-ai.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-paper hover:text-cobalt-400 underline decoration-paper/30 decoration-1 underline-offset-4 transition-colors"
                 >
-                  stratum-three.vercel.app ↗
+                  meridius-ai.vercel.app ↗
                 </a>
               </li>
             </ul>
