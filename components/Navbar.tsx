@@ -17,6 +17,7 @@ export default function Navbar() {
     { label: "About", href: "#about" },
     { label: "Stack", href: "#stack" },
     { label: "Work", href: "#work" },
+    { label: "Systems", href: "#systems" },
     { label: "Track record", href: "#research" },
     { label: "Contact", href: "#contact" },
   ];
