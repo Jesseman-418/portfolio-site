@@ -67,7 +67,7 @@ export default function FullStackShowcase() {
       </div>
       <div id="system-panel" role="tabpanel" aria-labelledby={`tab-${selected.id}`} className="system-flow">
         {selected.layers.map((layer) => (
-          <article key={layer.label} className="system-step">
+          <article key={layer.title} className="system-step">
             <h3>{layer.title}</h3>
             <p>{layer.detail}</p>
           </article>
