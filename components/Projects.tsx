@@ -43,7 +43,7 @@ function ProjectArtwork({ art }: { art: Project["art"] }) {
   if (art === "gateway") {
     return (
       <div className="art-window art-gateway" aria-hidden="true">
-        <div className="art-toolbar"><span>GATEWAY / CONTROL</span><span className="art-dots">● ● ●</span></div>
+        <div className="art-toolbar"><span>GATEWAY / CONTROL</span></div>
         <div className="gateway-body">
           <div className="gateway-rail"><i /><i /><i /><i /></div>
           <div className="gateway-main">

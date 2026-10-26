@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="hero-copy">
             <h1>
               <span className="hero-first-name">Jesseman</span>
-              <span>Devamirtham<span className="hero-period">.</span></span>
+              <span>Devamirtham</span>
             </h1>
             <p className="hero-tagline">
               I build secure APIs, full-stack products, and practical automation.
@@ -48,7 +48,6 @@ export default function Hero() {
             <span className="status-avatar">JD</span>
             <div>
               <strong>Jesseman Devamirtham</strong>
-              <span>Backend · Full-stack · Applied AI</span>
             </div>
           </div>
           <p className="hero-summary">

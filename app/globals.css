@@ -518,3 +518,11 @@ body.has-live-cursor, body.has-live-cursor * { cursor: none !important; }
 .experience-when { margin-bottom: .15rem; }
 .publication-link { margin-left: 0; }
 .system-step h3 { margin-top: 0; }
+
+
+/* Let the main section titles lead without eyebrow labels or ornamental marks. */
+.section-wrap { padding-top: clamp(4.5rem, 7vw, 7rem); padding-bottom: clamp(4.5rem, 7vw, 7rem); }
+.section-heading-row { margin: 0 0 3rem; }
+.hero-main { margin-top: clamp(2rem, 3vw, 2.8rem); }
+.hero-bottom { margin-top: 1.8rem; }
+.hero-period, .art-dots, .flow-connector, .skill-spark { display: none !important; }
