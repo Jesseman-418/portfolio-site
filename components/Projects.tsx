@@ -1,144 +1,101 @@
-const cases = [
+const projects = [
   {
-    "n": "01",
-    "title": "Zero-Trust API Gateway",
-    "summary": "An identity-aware reverse proxy that checks who is calling, what they can access, and how much traffic they can send.",
-    "problem": "Upstream services need consistent access control and resilience when dependencies become unhealthy.",
-    "solution": "Implemented JWT/JWKS authentication, RBAC and ABAC policies, per-user rate limits, circuit breakers, health checks, and request/error metrics. Added 25 automated tests for authentication, policies, and proxy behavior.",
-    "stack": [
-      "Node.js",
-      "Express",
-      "JWT / JWKS",
-      "RBAC / ABAC"
-    ],
-    "github": "https://github.com/Jesseman-418/zero-trust-api-gateway",
-    "live": null,
-    "tag": "API security · 25 tests"
+    number: "01",
+    tag: "API SECURITY",
+    title: "Zero-Trust API Gateway",
+    summary: "A reverse proxy that applies identity-aware access rules before traffic reaches an upstream service.",
+    detail: "Built JWT/JWKS verification, RBAC and ABAC policies, per-user rate limits, circuit breakers, health checks, and request/error metrics. Verified the behavior with 25 automated tests.",
+    stack: ["Node.js", "Express", "JWT / JWKS", "RBAC / ABAC"],
+    proof: "25 automated tests",
+    github: "https://github.com/Jesseman-418/zero-trust-api-gateway",
   },
   {
-    "n": "02",
-    "title": "OAuth 2.0 Authorization Server",
-    "summary": "An OAuth 2.0 and OpenID Connect server with authorization-code and client-credentials flows, PKCE, and signed tokens.",
-    "problem": "Token issuance and renewal need explicit safeguards against interception and refresh-token reuse.",
-    "solution": "Built PKCE verification, signed tokens, refresh-token rotation and reuse detection, with routes, middleware, and database operations separated into modules. Covered flows with 53 automated tests.",
-    "stack": [
-      "Node.js",
-      "Express",
-      "SQLite",
-      "OAuth 2.0 / OIDC",
-      "PKCE"
-    ],
-    "github": "https://github.com/Jesseman-418/oauth2-authorization-server",
-    "live": null,
-    "tag": "Identity · 53 tests"
+    number: "02",
+    tag: "IDENTITY",
+    title: "OAuth 2.0 Authorization Server",
+    summary: "An OAuth 2.0 and OpenID Connect service for authorization-code and client-credentials flows.",
+    detail: "Implemented PKCE, signed tokens, refresh-token rotation, and reuse detection, with routes, middleware, and database operations separated into modules. Covered the flows with 53 tests.",
+    stack: ["Node.js", "Express", "SQLite", "PKCE"],
+    proof: "53 automated tests",
+    github: "https://github.com/Jesseman-418/oauth2-authorization-server",
   },
   {
-    "n": "03",
-    "title": "DocQA-AI",
-    "summary": "Ask questions across PDF, text, and Markdown documents, with retrieved passages and source citations.",
-    "problem": "Finding an answer in a collection of documents should preserve the source context and work without a hosted model.",
-    "solution": "Built ingestion, paragraph-aware chunking, 384-dimensional sentence embeddings, and persistent FAISS search. Extractive answers run locally; optional OpenAI synthesis adds generative answers. Tested chunking, retrieval, and answer generation with pytest.",
-    "stack": [
-      "Python",
-      "FAISS",
-      "Streamlit",
-      "sentence-transformers",
-      "pytest"
-    ],
-    "github": "https://github.com/Jesseman-418/docqa-ai",
-    "live": null,
-    "tag": "Applied AI · Retrieval"
+    number: "03",
+    tag: "APPLIED AI · RETRIEVAL",
+    title: "DocQA AI",
+    summary: "A document question-answering app that retrieves relevant passages and keeps their source citations attached.",
+    detail: "Built PDF, text, and Markdown ingestion, sentence embeddings, a persistent FAISS index, and optional generated answers. Retrieval and answer behavior have pytest coverage.",
+    stack: ["Python", "Streamlit", "FAISS", "pytest"],
+    proof: "Source-linked retrieval",
+    github: "https://github.com/Jesseman-418/docqa-ai",
   },
   {
-    "n": "04",
-    "title": "Meridius AI",
-    "summary": "A website studio portfolio showcasing eight distinct niche website demos, from hospitality to fitness and home services.",
-    "problem": "Different local businesses need a visual identity and browsing experience tailored to their audience.",
-    "solution": "Built a static HTML, CSS, and JavaScript showcase with optimized WebP imagery and individual Vercel deployments. Demo forms prepare local briefs or demonstrate interactions; they do not send enquiries.",
-    "stack": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "WebP",
-      "Vercel"
-    ],
-    "github": "https://github.com/Jesseman-418/meridius-ai",
-    "live": "https://meridius-ai.vercel.app",
-    "tag": "Web design · Showcase"
-  }
+    number: "04",
+    tag: "AI SERVICES · WEB",
+    title: "Meridius AI",
+    summary: "An AI services company whose current focus is websites for local services, restaurants, spas, and similar businesses.",
+    detail: "The website work brings together clear customer journeys, search-engine optimization, and generative-engine optimization. Meridius AI also provides broader AI services to businesses.",
+    stack: ["Web strategy", "SEO", "GEO", "AI services"],
+    proof: "Eight niche demos",
+    github: "https://github.com/Jesseman-418/meridius-ai",
+    live: "https://meridius-ai.vercel.app",
+  },
 ];
 
 export default function Projects() {
   return (
-    <section id="work" className="py-32 lg:py-40 border-t border-ink/10">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="grid md:grid-cols-12 gap-8 mb-24">
-          <div className="md:col-span-2">
-            <span className="num-marker">04</span>
-          </div>
-          <div className="md:col-span-7">
-            <h2 className="display-text text-5xl md:text-7xl leading-[0.95] mb-6">
-              Selected work<span className="text-cobalt">.</span>
+    <section id="work" className="projects-section border-t border-ink/10 py-24 lg:py-36">
+      <div className="mx-auto max-w-[1500px] px-6 lg:px-14">
+        <div className="mb-20 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <p className="num-marker mb-5">Selected work / 2023—2026</p>
+            <h2 className="display-text text-6xl md:text-8xl lg:text-[10rem]">
+              Things I&apos;ve
+              <span className="block pl-[12vw] italic text-cobalt">made.</span>
             </h2>
-            <p className="text-lg text-ink/70 max-w-xl leading-snug">
-              Selected GitHub projects across API security, identity, document
-              retrieval, and web design. Explore the implementation, tests,
-              and setup in each repository.
-            </p>
           </div>
+          <p className="max-w-sm text-base leading-relaxed text-ink/60 lg:col-span-3 lg:col-start-10">
+            A few systems, experiments, and client-focused builds. Each one
+            started with a concrete problem and a different set of trade-offs.
+          </p>
         </div>
 
-        <div className="space-y-0">
-          {cases.map((c) => (
-            <article
-              key={c.n}
-              className="grid md:grid-cols-12 gap-6 md:gap-10 py-16 border-t border-ink/10 lift"
-            >
-              <div className="md:col-span-2 flex md:flex-col gap-4 md:gap-2">
-                <span className="num-marker">{c.n}</span>
-                <span className="text-xs text-ink/40 small-caps">{c.tag}</span>
+        <div>
+          {projects.map((project) => (
+            <article key={project.number} className="project-row grid gap-7 border-t border-ink/15 py-10 md:grid-cols-12 md:gap-8 lg:py-14">
+              <div className="flex items-start justify-between md:col-span-2 md:flex-col md:justify-start md:gap-5">
+                <span className="project-number font-mono text-5xl text-cobalt/80">{project.number}</span>
+                <span className="num-marker text-ink/45">{project.tag}</span>
               </div>
 
-              <div className="md:col-span-6">
-                <h3 className="display-text text-3xl md:text-4xl mb-5 leading-tight">
-                  {c.title}
+              <div className="md:col-span-7">
+                <h3 className="display-text mb-5 max-w-4xl text-4xl leading-[0.95] md:text-6xl lg:text-7xl">
+                  {project.title}
                 </h3>
-                <p className="text-ink/80 mb-7 leading-relaxed">{c.summary}</p>
-
-                <div className="grid sm:grid-cols-2 gap-x-8 gap-y-5 mb-7">
-                  <div>
-                    <div className="num-marker mb-1">Problem</div>
-                    <p className="text-sm text-ink/70 leading-snug">{c.problem}</p>
-                  </div>
-                  <div>
-                    <div className="num-marker mb-1">Solution</div>
-                    <p className="text-sm text-ink/70 leading-snug">{c.solution}</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-4 text-sm">
-                  {c.live && (
-                    <a href={c.live} target="_blank" rel="noopener noreferrer" className="ink-link">
-                      Live ↗
-                    </a>
-                  )}
-                  {c.github && (
-                    <a href={c.github} target="_blank" rel="noopener noreferrer" className="ink-link">
-                      Source ↗
-                    </a>
-                  )}
+                <p className="mb-5 max-w-2xl text-xl leading-snug text-ink/85 md:text-2xl">
+                  {project.summary}
+                </p>
+                <p className="max-w-2xl text-sm leading-relaxed text-ink/55 md:text-base">
+                  {project.detail}
+                </p>
+                <div className="mt-7 flex flex-wrap gap-x-3 gap-y-2 font-mono text-[10px] uppercase tracking-[0.12em] text-ink/45">
+                  {project.stack.map((item, index) => (
+                    <span key={item} className="flex items-center gap-3">
+                      {index > 0 && <span className="text-cobalt">/</span>}
+                      {item}
+                    </span>
+                  ))}
                 </div>
               </div>
 
-              <div className="md:col-span-4">
-                <div className="num-marker mb-3">Stack</div>
-                <ul className="space-y-1.5">
-                  {c.stack.map((s) => (
-                    <li key={s} className="text-sm text-ink/70 font-mono">
-                      {s}
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex flex-row items-end justify-between gap-6 md:col-span-3 md:flex-col md:items-end md:justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink/45">{project.proof}</span>
+                <div className="flex gap-5 text-sm">
+                  {project.live && (
+                    <a data-cursor="link" href={project.live} target="_blank" rel="noopener noreferrer" className="ink-link">Live site</a>
+                  )}
+                  <a data-cursor="link" href={project.github} target="_blank" rel="noopener noreferrer" className="ink-link">Source</a>
+                </div>
               </div>
             </article>
           ))}
