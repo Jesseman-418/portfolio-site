@@ -21,7 +21,6 @@ export default function Navbar() {
       </a>
 
       <div className="nav-pill">
-        <a href="#top" aria-label="Home" data-cursor="link" className="nav-home">/</a>
         {links.map((link) => (
           <a key={link.href} href={link.href} data-cursor="link">{link.label}</a>
         ))}
