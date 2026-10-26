@@ -1,71 +1,40 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 lg:py-48 border-t border-ink/10 bg-ink text-paper">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="grid md:grid-cols-12 gap-8">
-          <div className="md:col-span-2">
-            <span className="num-marker" style={{ color: "#a3a3a3" }}>
-              06 — Contact
-            </span>
-          </div>
-          <div className="md:col-span-8">
-            <h2 className="display-text text-5xl md:text-7xl leading-[0.95] mb-12">
-              Building something
-              <br />
-              <span className="italic">production-grade</span>?
-            </h2>
+    <section id="contact" className="contact-section overflow-hidden bg-cobalt py-24 text-paper lg:py-32">
+      <div className="mx-auto max-w-[1500px] px-6 lg:px-14">
+        <div className="mb-20 flex flex-wrap items-center justify-between gap-4 border-b border-paper/20 pb-4">
+          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-paper/65">End of page · Start of conversation</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-paper/65">Chennai, India</span>
+        </div>
 
-            <p className="text-xl md:text-2xl text-paper/80 max-w-2xl mb-16 leading-snug font-light">
-              For software engineering opportunities or a conversation about
-              backend systems, full-stack applications, and AI automation,
-              email is the best place to reach me.
+        <div className="grid gap-12 lg:grid-cols-12">
+          <h2 className="display-text text-6xl leading-[0.82] md:text-8xl lg:col-span-9 lg:text-[10rem]">
+            Have a good
+            <span className="block pl-[10vw] italic">problem?</span>
+          </h2>
+
+          <div className="flex flex-col justify-end gap-8 lg:col-span-3">
+            <p className="max-w-sm text-base leading-relaxed text-paper/75">
+              I’m open to full-stack engineering opportunities and thoughtful
+              conversations about secure APIs, dependable systems, and applied AI.
             </p>
-
-            <ul className="space-y-5 text-lg">
-              <li className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 break-all">
-                <span className="num-marker text-paper-300">Email</span>
-                <a
-                  href="mailto:njessemandevamirtham@gmail.com"
-                  className="text-paper hover:text-cobalt-400 underline decoration-paper/30 decoration-1 underline-offset-4 hover:decoration-cobalt-400 transition-colors"
-                >
-                  njessemandevamirtham@gmail.com
-                </a>
-              </li>
-              <li className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 break-all">
-                <span className="num-marker text-paper-300">GitHub</span>
-                <a
-                  href="https://github.com/Jesseman-418"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-paper hover:text-cobalt-400 underline decoration-paper/30 decoration-1 underline-offset-4 transition-colors"
-                >
-                  github.com/Jesseman-418 ↗
-                </a>
-              </li>
-              <li className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 break-all">
-                <span className="num-marker text-paper-300">LinkedIn</span>
-                <a
-                  href="https://www.linkedin.com/in/njd-jesse/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-paper hover:text-cobalt-400 underline decoration-paper/30 decoration-1 underline-offset-4 transition-colors"
-                >
-                  linkedin.com/in/njd-jesse ↗
-                </a>
-              </li>
-              <li className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 break-all">
-                <span className="num-marker text-paper-300">Studio</span>
-                <a
-                  href="https://meridius-ai.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-paper hover:text-cobalt-400 underline decoration-paper/30 decoration-1 underline-offset-4 transition-colors"
-                >
-                  meridius-ai.vercel.app ↗
-                </a>
-              </li>
-            </ul>
+            <a
+              data-cursor="link"
+              href="mailto:njessemandevamirtham@gmail.com"
+              className="contact-email"
+            >
+              njessemandevamirtham@gmail.com
+            </a>
           </div>
+        </div>
+
+        <div className="mt-24 flex flex-col justify-between gap-8 border-t border-paper/20 pt-5 sm:flex-row sm:items-end">
+          <div className="flex flex-wrap gap-x-8 gap-y-3 font-mono text-[10px] uppercase tracking-[0.14em]">
+            <a data-cursor="link" href="https://github.com/Jesseman-418" target="_blank" rel="noopener noreferrer" className="contact-link">GitHub</a>
+            <a data-cursor="link" href="https://www.linkedin.com/in/njd-jesse/" target="_blank" rel="noopener noreferrer" className="contact-link">LinkedIn</a>
+            <a data-cursor="link" href="https://meridius-ai.vercel.app" target="_blank" rel="noopener noreferrer" className="contact-link">Meridius AI</a>
+          </div>
+          <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper/60">Jesseman Devamirtham N · 2026</span>
         </div>
       </div>
     </section>
