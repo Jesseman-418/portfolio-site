@@ -1,23 +1,23 @@
 const timeline = [
   {
-    "when": "2025 — Present",
+    "when": "May 2025 — Present",
     "role": "Founder, AI Automation Services",
-    "org": "Growth Operating",
-    "what": "Develop automation systems for small-business clients. Built a Python and Playwright pipeline that automates lead sourcing and replaces repetitive manual prospect research.",
-    "href": null
+    "org": "Meridius AI",
+    "what": "Develop practical automation for small-business workflows. Built a Python and Playwright pipeline for lead sourcing and repetitive prospect research.",
+    "href": "https://meridius-ai.vercel.app"
   },
   {
     "when": "Jun 2025 — Jul 2025",
     "role": "Software Engineering Intern",
     "org": "Hyundai Motor India, Chennai",
-    "what": "Built dashboards and anomaly-detection pipelines for telemetry from 50+ robotic weld machines. Diagnosed a critical sensor failure with floor engineers and restored the real-time data pipeline within 24 hours.",
+    "what": "Built dashboards and anomaly-detection pipelines for telemetry from 50+ robotic weld machines. Worked with floor engineers to diagnose a critical sensor failure and restore the real-time data pipeline within 24 hours.",
     "href": null
   },
   {
-    "when": "2022 — 2026",
+    "when": "Sep 2022 — Aug 2026",
     "role": "B.Tech, Computer Science & Engineering",
     "org": "VIT Chennai",
-    "what": "Specialization in AI & Robotics. Graduate with project experience in backend services, full-stack applications, and AI automation.",
+    "what": "Specialization in AI & Robotics. Graduated in August 2026, with project experience in backend services, full-stack applications, and applied AI.",
     "href": null
   },
   {
