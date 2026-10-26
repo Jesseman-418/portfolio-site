@@ -22,7 +22,6 @@ export default function About() {
             <div>
               <div className="num-marker mb-2">Based</div>
               <div className="text-ink/80">Chennai, India</div>
-              <div className="text-ink/50">Open to relocating to Tokyo</div>
             </div>
             <div>
               <div className="num-marker mb-2">Discipline</div>
