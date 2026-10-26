@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 lg:px-12 w-full">
         <div className="flex items-center justify-between mb-20 md:mb-32">
           <span className="num-marker">FULL-STACK ENGINEERING · 2026</span>
-          <span className="num-marker hidden md:inline">Tokyo · Open to relocate</span>
+          <span className="num-marker hidden md:inline">Chennai · India</span>
         </div>
 
         <h1 className="display-text text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8.5vw] leading-[0.92] mb-10">
