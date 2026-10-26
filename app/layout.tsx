@@ -1,15 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, Manrope } from "next/font/google";
 import PointerField from "@/components/PointerField";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
 });
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -48,7 +48,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
       <body>
         <PointerField />
         {children}

@@ -20,7 +20,7 @@ export default function Hero() {
             <span className="hero-slashes" aria-hidden="true">///</span>
             <p className="hero-eyebrow">Full-stack software engineer</p>
             <h1>
-              Jesseman
+              <span className="hero-first-name">Jesseman</span>
               <span>Devamirtham<span className="hero-period">.</span></span>
             </h1>
             <p className="hero-tagline">
@@ -44,14 +44,9 @@ export default function Hero() {
                 alt="Jesseman Devamirtham"
                 width="460"
                 height="460"
-                fetchPriority="high"
+                loading="eager"
               />
-              <div className="portrait-caption">
-                <span>Jesseman Devamirtham N</span>
-                <span>CHENNAI · IN</span>
-              </div>
             </div>
-            <div className="portrait-note">Currently building<br /><b>useful things, carefully.</b></div>
           </div>
         </div>
 
