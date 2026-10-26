@@ -1,95 +1,91 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const links = [
     { label: "About", href: "#about" },
     { label: "Stack", href: "#stack" },
     { label: "Work", href: "#work" },
     { label: "Systems", href: "#systems" },
-    { label: "Track record", href: "#research" },
-    { label: "Contact", href: "#contact" },
+    { label: "Experience", href: "#research" },
   ];
 
+  const closeMenu = () => setMobileOpen(false);
+
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-paper/85 backdrop-blur-lg border-b border-ink/5"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
-        <a href="#" className="display-text text-xl tracking-tightest">
-          Jesseman<span className="text-cobalt">.</span>
+    <nav className="site-nav fixed left-0 right-0 top-0 z-50 border-b border-ink/10 bg-paper/75 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-3.5 lg:px-14">
+        <a
+          href="#top"
+          data-cursor="link"
+          aria-label="Jesseman Devamirtham home"
+          className="flex items-center gap-3"
+        >
+          <span className="nav-monogram">J</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/70">
+            Jesseman Devamirtham
+          </span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-10 text-sm">
-          {links.map((l) => (
-            <li key={l.href}>
+        <ul className="hidden items-center gap-7 md:flex lg:gap-9">
+          {links.map((link) => (
+            <li key={link.href}>
               <a
-                href={l.href}
-                className="text-ink/70 hover:text-ink transition-colors"
+                href={link.href}
+                data-cursor="link"
+                className="nav-link font-mono text-[10px] uppercase tracking-[0.16em] text-ink/60 transition-colors hover:text-cobalt"
               >
-                {l.label}
+                {link.label}
               </a>
             </li>
           ))}
         </ul>
 
         <a
+          data-cursor="link"
           href="mailto:njessemandevamirtham@gmail.com"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm bg-ink text-paper hover:bg-cobalt transition-colors"
+          className="nav-contact hidden items-center gap-3 border border-ink/20 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors hover:border-cobalt hover:text-cobalt md:inline-flex"
         >
-          Get in touch
-          <span aria-hidden>→</span>
+          <span className="h-1.5 w-1.5 rounded-full bg-cobalt" />
+          Say hello
         </a>
 
         <button
-          onClick={() => setMobileOpen((v) => !v)}
-          className="md:hidden text-ink"
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          type="button"
+          onClick={() => setMobileOpen((open) => !open)}
+          className="nav-toggle md:hidden"
+          aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={mobileOpen}
           aria-controls="mobile-navigation"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {mobileOpen ? (
-              <path strokeLinecap="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeWidth={1.5} d="M4 7h16M4 17h16" />
-            )}
-          </svg>
+          <span />
+          <span />
         </button>
       </div>
 
       {mobileOpen && (
-        <div id="mobile-navigation" className="md:hidden bg-paper border-b border-ink/5 px-6 py-6 space-y-4">
-          {links.map((l) => (
+        <div id="mobile-navigation" className="mobile-menu md:hidden">
+          {links.map((link, index) => (
             <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setMobileOpen(false)}
-              className="block text-ink/70 hover:text-ink text-base"
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              data-cursor="link"
+              className="mobile-menu-link"
             >
-              {l.label}
+              <span className="num-marker">0{index + 1}</span>
+              <span>{link.label}</span>
             </a>
           ))}
           <a
             href="mailto:njessemandevamirtham@gmail.com"
-            className="block w-full text-center px-4 py-2.5 bg-ink text-paper text-sm"
+            onClick={closeMenu}
+            className="mobile-menu-contact"
           >
-            Get in touch →
+            njessemandevamirtham@gmail.com
           </a>
         </div>
       )}
