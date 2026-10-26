@@ -21,15 +21,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jesseman Devamirtham N — Software Engineer",
-  description: "Software engineer in Chennai building backend services, full-stack applications, and AI automation. VIT Chennai graduate, former Hyundai Motor India intern, and IEEE Xplore first author.",
-  keywords: ["Jesseman Devamirtham", "software engineer", "backend", "full-stack", "AI applications", "Python", "Node.js", "React", "Chennai"],
+  title: "Jesseman Devamirtham N — HENNGE Full-Stack Engineering Pathway",
+  description: "Jesseman Devamirtham N is a 2026 VIT Chennai Computer Science graduate with experience in secure Node.js services, Python automation, full-stack applications, and industrial telemetry. Applying to HENNGE's Global Internship Program in Tokyo.",
+  keywords: ["Jesseman Devamirtham", "HENNGE Global Internship Program", "full-stack engineer", "backend", "Python", "TypeScript", "Node.js", "React", "VIT Chennai"],
   openGraph: {
-    title: "Jesseman Devamirtham N — Software Engineer",
-    description: "Backend, full-stack & AI applications. Explore API security, identity, document retrieval, and web projects.",
+    title: "Jesseman Devamirtham N — HENNGE Full-Stack Engineering Pathway",
+    description: "Secure APIs, full-stack applications, and industrial telemetry. VIT Chennai graduate applying to HENNGE's Global Internship Program.",
     type: "website", locale: "en_US",
   },
-  twitter: { card: "summary", title: "Jesseman Devamirtham N — Software Engineer", description: "Backend, full-stack & AI applications. Chennai, India." },
+  twitter: { card: "summary", title: "Jesseman Devamirtham N — Full-Stack Engineer", description: "Secure APIs, full-stack applications, and practical automation. Chennai, India; open to Tokyo." },
   robots: { index: true, follow: true },
 };
 
