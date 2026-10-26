@@ -34,7 +34,7 @@ const projects = [
     tag: "AI SERVICES · WEB",
     title: "Meridius AI",
     summary: "An AI services company whose current focus is websites for local services, restaurants, spas, and similar businesses.",
-    detail: "The website work brings together clear customer journeys, search-engine optimization, and generative-engine optimization. Meridius AI also provides broader AI services to businesses.",
+    detail: "Website work combines thoughtful navigation with search-engine optimization and generative-engine optimization. Meridius AI also provides broader AI services to businesses.",
     stack: ["Web strategy", "SEO", "GEO", "AI services"],
     proof: "Eight niche demos",
     github: "https://github.com/Jesseman-418/meridius-ai",
@@ -55,8 +55,8 @@ export default function Projects() {
             </h2>
           </div>
           <p className="max-w-sm text-base leading-relaxed text-ink/60 lg:col-span-3 lg:col-start-10">
-            A few systems, experiments, and client-focused builds. Each one
-            started with a concrete problem and a different set of trade-offs.
+            A few systems, experiments, and web projects. Each one started with
+            a concrete problem and a different set of trade-offs.
           </p>
         </div>
 
