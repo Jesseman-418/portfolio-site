@@ -1,5 +1,3 @@
-import Constellation from "@/components/Constellation";
-
 const socials = [
   { label: "GitHub", href: "https://github.com/Jesseman-418" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/njd-jesse/" },
@@ -30,7 +28,6 @@ export default function Hero() {
           </div>
 
           <div className="hero-visual">
-            <div className="hero-constellation" aria-hidden="true"><Constellation /></div>
             <div className="portrait-frame">
               <img
                 src="https://avatars.githubusercontent.com/u/143321248?v=4"
