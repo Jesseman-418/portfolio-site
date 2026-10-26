@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 const lanes = [
   {
     label: "Build",
@@ -47,7 +49,7 @@ export default function Stack() {
               </div>
               <ul className="stack-tokens">
                 {lane.tools.map((tool, toolIndex) => (
-                  <li key={tool} className="tool-token" style={{ "--token-index": toolIndex } as React.CSSProperties}>
+                  <li key={tool} className="tool-token" style={{ "--token-index": toolIndex } as CSSProperties}>
                     {tool}
                   </li>
                 ))}
