@@ -43,70 +43,39 @@ export default function FullStackShowcase() {
   const selected = systems.find((system) => system.id === selectedId) ?? systems[0];
 
   return (
-    <section id="systems" className="systems-section border-y border-ink/10 py-24 lg:py-32">
-      <div className="mx-auto max-w-[1500px] px-6 lg:px-14">
-        <div className="mb-14 grid gap-8 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-7">
-            <p className="num-marker mb-5">Under the hood / choose a project</p>
-            <h2 className="display-text text-5xl md:text-7xl lg:text-8xl">
-              Follow the
-              <span className="block pl-[10vw] italic text-cobalt">signal.</span>
-            </h2>
-          </div>
-          <p className="max-w-sm text-base leading-relaxed text-ink/60 lg:col-span-3 lg:col-start-10">
-            A quick tour through the layers behind a few things I’ve built,
-            from the first request to the checks that keep behavior honest.
-          </p>
-        </div>
-
-        <div className="system-tabs mb-12 flex flex-wrap gap-x-7 gap-y-4 border-b border-ink/15" role="tablist" aria-label="Choose a project">
-          {systems.map((system) => (
-            <button
-              key={system.id}
-              id={`tab-${system.id}`}
-              type="button"
-              role="tab"
-              aria-selected={selected.id === system.id}
-              aria-controls="system-panel"
-              data-cursor="link"
-              onClick={() => setSelectedId(system.id)}
-              className={`system-tab py-4 text-sm transition-colors ${
-                selected.id === system.id ? "is-selected text-cobalt" : "text-ink/45 hover:text-ink"
-              }`}
-            >
-              {system.label}
-            </button>
-          ))}
-        </div>
-
-        <div
-          id="system-panel"
-          role="tabpanel"
-          aria-labelledby={`tab-${selected.id}`}
-          className="system-flow"
-        >
-          {selected.layers.map((layer, index) => (
-            <article key={layer.label} className="system-step">
-              <div className="system-step-top">
-                <span className="num-marker">0{index + 1} / {layer.label}</span>
-                <span className="system-node" aria-hidden="true" />
-              </div>
-              <h3 className="display-text mt-6 text-3xl leading-tight md:text-4xl">{layer.title}</h3>
-              <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink/55">{layer.detail}</p>
-            </article>
-          ))}
-        </div>
-
-        <a
-          data-cursor="link"
-          href={selected.repo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-12 ink-link text-sm"
-        >
-          Read the source on GitHub
-        </a>
+    <section id="systems" className="systems-section section-wrap">
+      <div className="section-kicker"><span>05</span><span>Under the hood</span></div>
+      <div className="section-heading-row systems-heading">
+        <h2>Follow the<br /><em>signal.</em></h2>
+        <p>Pick a project and trace how the pieces connect, from the first request to the checks that cover its behavior.</p>
       </div>
+      <div className="system-tabs" role="tablist" aria-label="Choose a project">
+        {systems.map((system) => (
+          <button
+            key={system.id}
+            id={`tab-${system.id}`}
+            type="button"
+            role="tab"
+            aria-selected={selected.id === system.id}
+            aria-controls="system-panel"
+            data-cursor="link"
+            onClick={() => setSelectedId(system.id)}
+            className={`system-tab ${selected.id === system.id ? "is-selected" : ""}`}
+          >
+            {system.label}
+          </button>
+        ))}
+      </div>
+      <div id="system-panel" role="tabpanel" aria-labelledby={`tab-${selected.id}`} className="system-flow">
+        {selected.layers.map((layer, index) => (
+          <article key={layer.label} className="system-step">
+            <div className="system-step-top"><span>0{index + 1}</span><i /></div>
+            <h3>{layer.title}</h3>
+            <p>{layer.detail}</p>
+          </article>
+        ))}
+      </div>
+      <a href={selected.repo} target="_blank" rel="noopener noreferrer" data-cursor="link" className="system-source">Read the source on GitHub</a>
     </section>
   );
 }

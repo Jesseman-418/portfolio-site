@@ -1,23 +1,23 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import FullStackShowcase from "@/components/FullStackShowcase";
-import About from "@/components/About";
 import Stack from "@/components/Stack";
+import About from "@/components/About";
 import Experience from "@/components/Experience";
+import FullStackShowcase from "@/components/FullStackShowcase";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="portfolio-page">
       <Navbar />
       <Hero />
-      <About />
-      <Stack />
       <Projects />
-      <FullStackShowcase />
+      <Stack />
+      <About />
       <Experience />
+      <FullStackShowcase />
       <Contact />
       <Footer />
     </main>

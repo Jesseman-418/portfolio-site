@@ -23,33 +23,33 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Jesseman Devamirtham N — Full-Stack Software Engineer",
-  description: "Jesseman Devamirtham N is a 2026 VIT Chennai Computer Science graduate with experience in secure Node.js services, Python automation, full-stack applications, and industrial telemetry. Based in Chennai, India.",
+  description: "Jesseman Devamirtham N is a VIT Chennai Computer Science graduate building secure APIs, full-stack applications, and practical automation. Based in Chennai, India.",
   keywords: ["Jesseman Devamirtham", "full-stack software engineer", "backend engineer", "Python", "TypeScript", "Node.js", "React", "VIT Chennai", "Chennai"],
   openGraph: {
     title: "Jesseman Devamirtham N — Full-Stack Software Engineer",
-    description: "Secure APIs, full-stack applications, practical automation, and industrial telemetry. Based in Chennai, India.",
-    type: "website", locale: "en_US",
+    description: "Secure APIs, full-stack applications, practical automation, and applied AI. Based in Chennai, India.",
+    type: "website",
+    locale: "en_US",
   },
-  twitter: { card: "summary", title: "Jesseman Devamirtham N — Full-Stack Engineer", description: "Secure APIs, full-stack applications, and practical automation. Based in Chennai, India." },
+  twitter: {
+    card: "summary",
+    title: "Jesseman Devamirtham N — Full-Stack Engineer",
+    description: "Secure APIs, full-stack applications, and practical automation. Based in Chennai, India.",
+  },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#101310",
+  themeColor: "#101010",
   colorScheme: "dark",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}
-    >
-      <body className="font-sans bg-paper text-ink">
+    <html lang="en" className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+      <body>
         <PointerField />
         {children}
       </body>

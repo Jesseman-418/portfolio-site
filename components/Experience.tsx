@@ -24,47 +24,29 @@ const timeline = [
 
 export default function Experience() {
   return (
-    <section id="research" className="experience-section border-t border-ink/10 py-24 lg:py-36">
-      <div className="mx-auto max-w-[1500px] px-6 lg:px-14">
-        <div className="mb-16 grid gap-8 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-8">
-            <p className="num-marker mb-5">Field notes / work + study</p>
-            <h2 className="display-text text-5xl md:text-7xl lg:text-8xl">
-              Places I learned
-              <span className="block pl-[12vw] italic text-cobalt">to build.</span>
-            </h2>
-          </div>
-        </div>
-
-        <ol className="experience-list">
-          {timeline.map((item) => (
-            <li key={item.when} className="experience-row">
-              <div className="experience-date num-marker">{item.when}</div>
-              <div className="experience-title">
-                <h3 className="display-text text-3xl leading-tight md:text-4xl">
-                  {item.href ? (
-                    <a data-cursor="link" href={item.href} target="_blank" rel="noopener noreferrer" className="experience-link">
-                      {item.role}
-                    </a>
-                  ) : item.role}
-                </h3>
-                <span className="mt-2 block font-mono text-[10px] uppercase tracking-[0.13em] text-ink/40">{item.note}</span>
-              </div>
-              <p className="max-w-xl text-sm leading-relaxed text-ink/55 md:text-base">{item.detail}</p>
-            </li>
-          ))}
-        </ol>
-
-        <div className="publication-line mt-14 grid gap-4 border-t border-ink/15 pt-5 md:grid-cols-12 md:items-start">
-          <span className="num-marker md:col-span-2">Research · First author</span>
-          <p className="md:col-span-7">
-            <a data-cursor="link" href="https://ieeexplore.ieee.org/document/10537381" target="_blank" rel="noopener noreferrer" className="ink-link">
-              Leveraging Location Data for Enhanced Contact Tracing in Educational Settings
-            </a>
-            <span className="ml-3 font-mono text-[10px] uppercase tracking-[0.12em] text-ink/40">IEEE Xplore</span>
-          </p>
-        </div>
+    <section id="research" className="experience-section section-wrap">
+      <div className="section-kicker"><span>04</span><span>Work · study · research</span></div>
+      <div className="section-heading-row experience-heading">
+        <h2>Where I’ve<br /><em>been building.</em></h2>
+        <p>Work that taught me to pay attention to the system around the code: the people, the data, and what happens when something fails.</p>
       </div>
+      <div className="experience-list">
+        {timeline.map((item, index) => (
+          <article className="experience-item" key={item.when}>
+            <span className="experience-index">0{index + 1}</span>
+            <div className="experience-main">
+              <span className="experience-when">{item.when}</span>
+              <h3>{item.href ? <a href={item.href} target="_blank" rel="noopener noreferrer" data-cursor="link">{item.role}</a> : item.role}</h3>
+              <span className="experience-note">{item.note}</span>
+            </div>
+            <p>{item.detail}</p>
+          </article>
+        ))}
+      </div>
+      <a className="publication-link" href="https://ieeexplore.ieee.org/document/10537381" target="_blank" rel="noopener noreferrer" data-cursor="link">
+        <span>First-author publication · IEEE Xplore</span>
+        <strong>Leveraging Location Data for Enhanced Contact Tracing in Educational Settings</strong>
+      </a>
     </section>
   );
 }
