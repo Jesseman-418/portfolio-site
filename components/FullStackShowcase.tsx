@@ -8,26 +8,10 @@ const systems = [
     label: "Zero-Trust API Gateway",
     repo: "https://github.com/Jesseman-418/zero-trust-api-gateway",
     layers: [
-      {
-        label: "01 · Request",
-        title: "Client request",
-        detail: "A request reaches the reverse proxy with an identity token.",
-      },
-      {
-        label: "02 · Service",
-        title: "Node.js + Express",
-        detail: "The gateway validates the request and forwards allowed traffic to an upstream service.",
-      },
-      {
-        label: "03 · Access + resilience",
-        title: "JWT/JWKS · RBAC/ABAC",
-        detail: "Per-user rate limits, circuit breakers, health checks, and request/error metrics handle policy and failure cases.",
-      },
-      {
-        label: "04 · Verification",
-        title: "25 automated tests",
-        detail: "Tests cover authentication, access policies, and proxy behavior.",
-      },
+      { label: "Request", title: "Client request", detail: "An identity token arrives with a request." },
+      { label: "Service", title: "Node.js + Express", detail: "The reverse proxy validates and routes allowed traffic." },
+      { label: "Guardrails", title: "JWT/JWKS · RBAC/ABAC", detail: "Rate limits, circuit breakers, health checks, and metrics." },
+      { label: "Proof", title: "25 tests", detail: "Authentication, policies, and proxy behavior." },
     ],
   },
   {
@@ -35,26 +19,10 @@ const systems = [
     label: "OAuth 2.0 Authorization Server",
     repo: "https://github.com/Jesseman-418/oauth2-authorization-server",
     layers: [
-      {
-        label: "01 · Request",
-        title: "Client application",
-        detail: "A client starts an authorization-code or client-credentials flow.",
-      },
-      {
-        label: "02 · Service",
-        title: "Node.js + Express",
-        detail: "The authorization server handles OAuth 2.0 and OpenID Connect endpoints.",
-      },
-      {
-        label: "03 · Identity + data",
-        title: "PKCE · SQLite",
-        detail: "Signed tokens, refresh-token rotation, and reuse detection protect the token lifecycle.",
-      },
-      {
-        label: "04 · Verification",
-        title: "53 automated tests",
-        detail: "Tests exercise the authorization flows, token behavior, and security checks.",
-      },
+      { label: "Request", title: "Client application", detail: "Starts an authorization-code or client-credentials flow." },
+      { label: "Service", title: "Node.js + Express", detail: "Serves OAuth 2.0 and OpenID Connect endpoints." },
+      { label: "Identity + data", title: "PKCE · SQLite", detail: "Signed tokens, refresh rotation, and reuse detection." },
+      { label: "Proof", title: "53 tests", detail: "Exercises authorization flows and token safeguards." },
     ],
   },
   {
@@ -62,26 +30,10 @@ const systems = [
     label: "DocQA AI",
     repo: "https://github.com/Jesseman-418/docqa-ai",
     layers: [
-      {
-        label: "01 · Interface",
-        title: "Streamlit application",
-        detail: "A user uploads documents and asks a question in a simple web interface.",
-      },
-      {
-        label: "02 · Processing",
-        title: "Python ingestion",
-        detail: "PDF, text, and Markdown files are split into passages and converted into sentence embeddings.",
-      },
-      {
-        label: "03 · Retrieval",
-        title: "Persistent FAISS index",
-        detail: "Semantic search retrieves relevant passages and returns source citations.",
-      },
-      {
-        label: "04 · Verification",
-        title: "pytest coverage",
-        detail: "Tests cover chunking, retrieval, and answer generation; generated answers are optional.",
-      },
+      { label: "Interface", title: "Streamlit app", detail: "Upload documents and ask a question." },
+      { label: "Processing", title: "Python ingestion", detail: "Split files and create sentence embeddings." },
+      { label: "Retrieval", title: "Persistent FAISS", detail: "Retrieve relevant passages with source citations." },
+      { label: "Proof", title: "pytest", detail: "Tests chunking, retrieval, and answer generation." },
     ],
   },
 ];
@@ -91,26 +43,23 @@ export default function FullStackShowcase() {
   const selected = systems.find((system) => system.id === selectedId) ?? systems[0];
 
   return (
-    <section id="systems" className="py-32 lg:py-40 border-t border-ink/10">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="grid md:grid-cols-12 gap-8 mb-14">
-          <div className="md:col-span-2">
-            <span className="num-marker">System walkthrough</span>
-          </div>
-          <div className="md:col-span-8">
-            <h2 className="display-text text-5xl md:text-6xl leading-[0.95] mb-6">
-              How the pieces{" "}
-              <span className="italic">fit together</span>
-              <span className="text-cobalt">.</span>
+    <section id="systems" className="systems-section border-y border-ink/10 py-24 lg:py-32">
+      <div className="mx-auto max-w-[1500px] px-6 lg:px-14">
+        <div className="mb-14 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <p className="num-marker mb-5">Under the hood / choose a project</p>
+            <h2 className="display-text text-5xl md:text-7xl lg:text-8xl">
+              Follow the
+              <span className="block pl-[10vw] italic text-cobalt">signal.</span>
             </h2>
-            <p className="text-lg text-ink/70 max-w-2xl leading-relaxed">
-              Explore a project from its entry point through services, data or
-              access controls, and the checks used to verify its behavior.
-            </p>
           </div>
+          <p className="max-w-sm text-base leading-relaxed text-ink/60 lg:col-span-3 lg:col-start-10">
+            A quick tour through the layers behind a few things I’ve built,
+            from the first request to the checks that keep behavior honest.
+          </p>
         </div>
 
-        <div className="flex flex-wrap gap-3 mb-10" role="tablist" aria-label="Choose a project">
+        <div className="system-tabs mb-12 flex flex-wrap gap-x-7 gap-y-4 border-b border-ink/15" role="tablist" aria-label="Choose a project">
           {systems.map((system) => (
             <button
               key={system.id}
@@ -119,11 +68,10 @@ export default function FullStackShowcase() {
               role="tab"
               aria-selected={selected.id === system.id}
               aria-controls="system-panel"
+              data-cursor="link"
               onClick={() => setSelectedId(system.id)}
-              className={`px-4 py-3 text-sm border transition-colors ${
-                selected.id === system.id
-                  ? "bg-ink text-paper border-ink"
-                  : "bg-transparent text-ink/70 border-ink/15 hover:border-ink/50"
+              className={`system-tab py-4 text-sm transition-colors ${
+                selected.id === system.id ? "is-selected text-cobalt" : "text-ink/45 hover:text-ink"
               }`}
             >
               {system.label}
@@ -135,24 +83,28 @@ export default function FullStackShowcase() {
           id="system-panel"
           role="tabpanel"
           aria-labelledby={`tab-${selected.id}`}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-ink/15"
+          className="system-flow"
         >
-          {selected.layers.map((layer) => (
-            <article key={layer.label} className="py-7 pr-6 border-b sm:border-b-0 sm:border-r last:border-r-0 border-ink/10">
-              <div className="num-marker mb-4">{layer.label}</div>
-              <h3 className="display-text text-2xl leading-tight mb-3">{layer.title}</h3>
-              <p className="text-sm text-ink/70 leading-relaxed">{layer.detail}</p>
+          {selected.layers.map((layer, index) => (
+            <article key={layer.label} className="system-step">
+              <div className="system-step-top">
+                <span className="num-marker">0{index + 1} / {layer.label}</span>
+                <span className="system-node" aria-hidden="true" />
+              </div>
+              <h3 className="display-text mt-6 text-3xl leading-tight md:text-4xl">{layer.title}</h3>
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink/55">{layer.detail}</p>
             </article>
           ))}
         </div>
 
         <a
+          data-cursor="link"
           href={selected.repo}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-8 ink-link text-sm"
+          className="inline-block mt-12 ink-link text-sm"
         >
-          View source on GitHub
+          Read the source on GitHub
         </a>
       </div>
     </section>
