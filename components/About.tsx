@@ -14,7 +14,7 @@ export default function About() {
             <p>I’m Jesseman Devamirtham N, a 2026 Computer Science graduate from VIT Chennai, specializing in AI &amp; Robotics. I build backend services and full-stack applications, with a focus on secure access, reliable behavior, and clear interfaces.</p>
             <p>At Hyundai Motor India, I built dashboards and anomaly-detection pipelines for telemetry from 50+ robotic weld machines. Working with floor engineers, I diagnosed a critical sensor failure and helped restore the real-time pipeline within 24 hours.</p>
             <p>As founder of Meridius AI, I develop practical automation for small-business workflows, including a Python and Playwright pipeline for lead sourcing. My independent projects explore API security, OAuth/OIDC, and document retrieval with source citations.</p>
-            <p>I’m applying to HENNGE’s Global Internship Program because I want to contribute to full-stack product work while learning from direct engineering feedback. I’m especially interested in developing my cloud deployment and DevOps skills through hands-on work and mentorship in Tokyo.</p>
+            <p>I’m pursuing full-stack engineering opportunities that combine product work with thoughtful engineering. I’m especially interested in deepening my cloud deployment and DevOps skills through hands-on work, mentorship, and collaboration in an international team.</p>
             <p className="text-ink/60 pt-2">I care about understandable systems: clear interfaces, explicit access policies, useful diagnostics, and tests that exercise real behavior.</p>
           </div>
 
