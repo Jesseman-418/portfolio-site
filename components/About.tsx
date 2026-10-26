@@ -1,53 +1,64 @@
 export default function About() {
   return (
-    <section id="about" className="py-32 lg:py-40 border-t border-ink/10">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="grid md:grid-cols-12 gap-8 md:gap-12">
-          <div className="md:col-span-2">
-            <span className="num-marker">02 — About</span>
-          </div>
+    <section id="about" className="about-section overflow-hidden py-24 lg:py-36">
+      <div className="mx-auto max-w-[1500px] px-6 lg:px-14">
+        <div className="mb-16 flex flex-wrap items-center justify-between gap-4 border-b border-ink/15 pb-4">
+          <span className="num-marker">A bit about me</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink/40">Computer Science · AI &amp; Robotics</span>
+        </div>
 
-          <div className="md:col-span-6 space-y-7 text-lg leading-relaxed text-ink/85">
-            <h2 className="display-text text-3xl md:text-4xl leading-tight text-ink mb-2">
-              Useful software.<br /><span className="text-cobalt">Carefully engineered.</span>
-            </h2>
-            <p>I’m Jesseman Devamirtham N, a 2026 Computer Science graduate from VIT Chennai, specializing in AI &amp; Robotics. I build backend services and full-stack applications, with a focus on secure access, reliable behavior, and clear interfaces.</p>
-            <p>At Hyundai Motor India, I built dashboards and anomaly-detection pipelines for telemetry from 50+ robotic weld machines. Working with floor engineers, I diagnosed a critical sensor failure and helped restore the real-time pipeline within 24 hours.</p>
-            <p>As founder of Meridius AI, I develop practical automation for small-business workflows, including a Python and Playwright pipeline for lead sourcing. My independent projects explore API security, OAuth/OIDC, and document retrieval with source citations.</p>
-            <p>I’m pursuing full-stack engineering opportunities that combine product work with thoughtful engineering. I’m especially interested in deepening my cloud deployment and DevOps skills through hands-on work, mentorship, and collaboration in an international team.</p>
-            <p className="text-ink/60 pt-2">I care about understandable systems: clear interfaces, explicit access policies, useful diagnostics, and tests that exercise real behavior.</p>
-          </div>
+        <h2 className="display-text max-w-6xl text-5xl leading-[0.9] md:text-7xl lg:text-[7.5rem]">
+          I like work that survives
+          <span className="block pl-[9vw] italic text-cobalt">contact with reality.</span>
+        </h2>
 
-          <aside className="md:col-span-3 md:col-start-10 md:border-l md:border-ink/10 md:pl-8 space-y-7 text-sm">
-            <div>
-              <div className="num-marker mb-2">Based</div>
-              <div className="text-ink/80">Chennai, India</div>
-            </div>
-            <div>
-              <div className="num-marker mb-2">Discipline</div>
-              <div className="text-ink/80">
-                Backend &amp; full-stack engineering
-                <br />
-                <span className="text-ink/50">+ Applied AI/ML research</span>
-              </div>
-            </div>
-            <div>
-              <div className="num-marker mb-2">Education</div>
-              <div className="text-ink/80">
-                B.Tech CSE · AI &amp; Robotics
-                <br />
-                <span className="text-ink/50">VIT Chennai · 2022–2026</span>
-              </div>
-            </div>
-            <div>
-              <div className="num-marker mb-2">Selected evidence</div>
-              <ul className="text-ink/80 space-y-1">
-                <li>IEEE Xplore first-author publication</li>
-                <li>78 tests across two API projects</li>
-                <li>Hyundai Motor India internship</li>
-              </ul>
-            </div>
-          </aside>
+        <div className="mt-16 grid gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-4 lg:col-start-3">
+            <p className="text-lg leading-relaxed text-ink/80">
+              I’m Jesseman Devamirtham N, a 2026 Computer Science graduate from
+              VIT Chennai. I build backend services and full-stack applications,
+              with a focus on clear interfaces, secure access, and reliable
+              behavior.
+            </p>
+          </div>
+          <div className="space-y-6 lg:col-span-4 lg:col-start-8">
+            <p className="text-base leading-relaxed text-ink/60">
+              At Hyundai Motor India, I worked on dashboards and anomaly
+              detection for telemetry from 50+ robotic weld machines. I worked
+              with floor engineers to diagnose a critical sensor failure and
+              help restore the real-time pipeline within 24 hours.
+            </p>
+            <p className="text-base leading-relaxed text-ink/60">
+              I founded Meridius AI, an AI services company for businesses.
+              Its current focus is website work for local services, restaurants,
+              spas, and similar businesses, with SEO and GEO optimization.
+              My personal projects explore API security, OAuth/OIDC, and
+              document retrieval.
+            </p>
+            <p className="text-base leading-relaxed text-ink/60">
+              I’m interested in the parts of engineering that make software
+              dependable after it works once: tests, observability, thoughtful
+              failure handling, and deployment.
+            </p>
+          </div>
+        </div>
+
+        <div className="about-signals mt-20 grid grid-cols-1 border-y border-ink/15 sm:grid-cols-3">
+          <div className="about-signal">
+            <span className="num-marker">01 / tested</span>
+            <strong className="display-text">78</strong>
+            <span className="text-sm text-ink/50">tests across two API projects</span>
+          </div>
+          <div className="about-signal">
+            <span className="num-marker">02 / industrial</span>
+            <strong className="display-text">50+</strong>
+            <span className="text-sm text-ink/50">robotic weld machines monitored</span>
+          </div>
+          <div className="about-signal">
+            <span className="num-marker">03 / education</span>
+            <strong className="display-text">2026</strong>
+            <span className="text-sm text-ink/50">VIT Chennai · B.Tech CSE</span>
+          </div>
         </div>
       </div>
     </section>
