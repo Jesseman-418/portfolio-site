@@ -28,7 +28,7 @@ export default function Stack() {
       </div>
       <div className="skill-cloud">
         {groups.map((group) => (
-          <div className="skill-group" key={group.label}>
+          <div className="skill-group" key={group.items[0][1]}>
             <div className="skill-group-chips">
               {group.items.map(([mark, name]) => (
                 <span className="skill-chip" key={name} data-cursor="link">
