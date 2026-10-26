@@ -8,18 +8,18 @@ A personal portfolio for my work in full-stack software engineering, backend sys
 
 [jesseman-dev.vercel.app](https://jesseman-dev.vercel.app/)
 
-The portfolio includes an introduction, technical skills, selected projects, an interactive system walkthrough, experience, publication, and contact links.
+The portfolio includes selected projects, an interactive system walkthrough, experience, publication, and contact links. On desktop, a pointer-responsive network graphic and custom cursor react to movement and interactive elements; reduced-motion preferences and touch input are supported.
 
 ## Featured projects
 
 - **Zero-Trust API Gateway** — Node.js and Express reverse proxy with JWT/JWKS verification, RBAC/ABAC policies, per-user rate limits, circuit breakers, health checks, and request/error metrics. Includes 25 automated tests.
 - **OAuth 2.0 Authorization Server** — Node.js and Express implementation of authorization-code and client-credentials flows, PKCE, signed tokens, and refresh-token reuse detection. Includes 53 automated tests.
 - **DocQA AI** — Python and Streamlit document question-answering app with PDF, text, and Markdown ingestion, persistent FAISS retrieval, and source citations.
-- **Meridius AI** — Website studio showcase with distinct demo sites for local business niches.
+- **Meridius AI** — AI services company for businesses. Its current focus is websites for local services, restaurants, spas, and similar businesses, with SEO and GEO optimization.
 
 ## Technology
 
-Next.js 14, React 18, TypeScript, Tailwind CSS, and Framer Motion.
+Next.js 14, React 18, TypeScript, Tailwind CSS, Framer Motion, and Canvas.
 
 ## Run locally
 
