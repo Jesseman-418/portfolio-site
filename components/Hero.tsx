@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col justify-end pt-32 pb-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-12 w-full">
         <div className="flex items-center justify-between mb-20 md:mb-32">
-          <span className="num-marker">HENNGE GIP · 2026</span>
+          <span className="num-marker">FULL-STACK ENGINEERING · 2026</span>
           <span className="num-marker hidden md:inline">Tokyo · Open to relocate</span>
         </div>
 
@@ -21,8 +21,8 @@ export default function Hero() {
               APIs, full-stack products, and practical automation. My work
               includes OAuth and OpenID Connect services with 78 automated
               tests, and real-time telemetry systems for 50+ robotic weld
-              machines. I’m applying to HENNGE’s Full-Stack Engineering Pathway
-              to contribute across the stack and deepen my cloud and DevOps
+              machines. I’m looking for a full-stack engineering role where I
+              can contribute across the stack and deepen my cloud and DevOps
               experience through hands-on work and mentorship.
             </p>
           </div>
