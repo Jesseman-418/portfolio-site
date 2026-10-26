@@ -1,10 +1,7 @@
 type Project = {
-  number: string;
-  tag: string;
   title: string;
   summary: string;
   detail: string;
-  stack: string;
   github: string;
   live?: string;
   art: "gateway" | "oauth" | "docqa" | "meridius";
@@ -12,42 +9,30 @@ type Project = {
 
 const projects: Project[] = [
   {
-    number: "01",
-    tag: "API SECURITY",
     title: "Zero-Trust API Gateway",
     summary: "A reverse proxy that checks identity and access policies before requests reach an upstream service.",
     detail: "JWT/JWKS verification, RBAC and ABAC, per-user rate limits, circuit breakers, health checks, request metrics, and 25 automated tests.",
-    stack: "Node.js · Express · JWT/JWKS",
     github: "https://github.com/Jesseman-418/zero-trust-api-gateway",
     art: "gateway",
   },
   {
-    number: "02",
-    tag: "IDENTITY",
     title: "OAuth 2.0 Authorization Server",
     summary: "An OAuth 2.0 and OpenID Connect service for authorization-code and client-credentials flows.",
     detail: "PKCE, signed tokens, refresh-token rotation, and reuse detection, with routes and database operations separated into modules. Covered by 53 tests.",
-    stack: "Node.js · Express · SQLite · PKCE",
     github: "https://github.com/Jesseman-418/oauth2-authorization-server",
     art: "oauth",
   },
   {
-    number: "03",
-    tag: "APPLIED AI · RETRIEVAL",
     title: "DocQA AI",
     summary: "A document question-answering app that keeps retrieved passages connected to their source citations.",
     detail: "PDF, text, and Markdown ingestion, sentence embeddings, persistent FAISS search, local extractive answers, and optional generated answers.",
-    stack: "Python · Streamlit · FAISS · pytest",
     github: "https://github.com/Jesseman-418/docqa-ai",
     art: "docqa",
   },
   {
-    number: "04",
-    tag: "AI SERVICES · WEB",
     title: "Meridius AI",
     summary: "An AI services company whose current focus is websites for local services, restaurants, spas, and similar businesses.",
     detail: "Website work combines thoughtful navigation with search-engine optimization and generative-engine optimization. Meridius AI also provides broader AI services to businesses.",
-    stack: "Web strategy · SEO · GEO · AI services",
     github: "https://github.com/Jesseman-418/meridius-ai",
     live: "https://meridius-ai.vercel.app",
     art: "meridius",
@@ -115,7 +100,6 @@ function ProjectArtwork({ art }: { art: Project["art"] }) {
 export default function Projects() {
   return (
     <section id="work" className="projects-section section-wrap">
-      <div className="section-kicker"><span>02</span><span>Selected work</span></div>
       <div className="section-heading-row">
         <h2>Made with<br /><em>intent.</em></h2>
         <p>A few systems, experiments, and web projects. Each one started with a different problem and a set of trade-offs.</p>
@@ -123,11 +107,10 @@ export default function Projects() {
 
       <div className="project-grid">
         {projects.map((project) => (
-          <article key={project.number} className={`project-card project-card--${project.art}`}>
+          <article key={project.title} className={`project-card project-card--${project.art}`}>
             <ProjectArtwork art={project.art} />
             <div className="project-info">
-              <div className="project-meta"><span>{project.number} / {project.tag}</span><span>{project.stack}</span></div>
-              <h3>{project.title}</h3>
+                <h3>{project.title}</h3>
               <p className="project-summary">{project.summary}</p>
               <p className="project-detail">{project.detail}</p>
               <div className="project-links">

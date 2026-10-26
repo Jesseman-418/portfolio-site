@@ -1,7 +1,6 @@
 export default function About() {
   return (
     <section id="about" className="about-section section-wrap">
-      <div className="section-kicker"><span>01</span><span>A little about me</span></div>
       <div className="about-layout">
         <h2>Good software<br /><em>does its job.</em></h2>
         <div className="about-copy">

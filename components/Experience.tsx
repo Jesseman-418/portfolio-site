@@ -25,26 +25,22 @@ const timeline = [
 export default function Experience() {
   return (
     <section id="research" className="experience-section section-wrap">
-      <div className="section-kicker"><span>04</span><span>Work · study · research</span></div>
       <div className="section-heading-row experience-heading">
         <h2>Where I’ve<br /><em>been building.</em></h2>
         <p>Work that taught me to pay attention to the system around the code: the people, the data, and what happens when something fails.</p>
       </div>
       <div className="experience-list">
-        {timeline.map((item, index) => (
+        {timeline.map((item) => (
           <article className="experience-item" key={item.when}>
-            <span className="experience-index">0{index + 1}</span>
             <div className="experience-main">
               <span className="experience-when">{item.when}</span>
               <h3>{item.href ? <a href={item.href} target="_blank" rel="noopener noreferrer" data-cursor="link">{item.role}</a> : item.role}</h3>
-              <span className="experience-note">{item.note}</span>
             </div>
             <p>{item.detail}</p>
           </article>
         ))}
       </div>
       <a className="publication-link" href="https://ieeexplore.ieee.org/document/10537381" target="_blank" rel="noopener noreferrer" data-cursor="link">
-        <span>First-author publication · IEEE Xplore</span>
         <strong>Leveraging Location Data for Enhanced Contact Tracing in Educational Settings</strong>
       </a>
     </section>

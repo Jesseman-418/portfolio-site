@@ -10,15 +10,8 @@ export default function Hero() {
   return (
     <section id="top" className="hero-section">
       <div className="hero-inner">
-        <div className="hero-meta">
-          <span className="availability"><i /> Chennai, India · Available for full-stack roles</span>
-          <span className="hero-class">VIT Chennai · Class of 2026</span>
-        </div>
-
         <div className="hero-main">
           <div className="hero-copy">
-            <span className="hero-slashes" aria-hidden="true">///</span>
-            <p className="hero-eyebrow">Full-stack software engineer</p>
             <h1>
               <span className="hero-first-name">Jesseman</span>
               <span>Devamirtham<span className="hero-period">.</span></span>
@@ -57,7 +50,6 @@ export default function Hero() {
               <strong>Jesseman Devamirtham</strong>
               <span>Backend · Full-stack · Applied AI</span>
             </div>
-            <span className="status-live"><i /> OPEN TO ROLES</span>
           </div>
           <p className="hero-summary">
             From OAuth services with 78 tests to telemetry systems for 50+ robotic weld machines, I like making complex systems feel clear and dependable.

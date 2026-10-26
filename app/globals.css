@@ -506,3 +506,15 @@ body.has-live-cursor, body.has-live-cursor * { cursor: none !important; }
   .project-grid { gap: 3rem; }
   .art-window { min-height: 290px; }
 }
+
+
+/* Clear visual hierarchy: keep section titles, remove micro-label clutter. */
+.hero-main { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
+.hero-bottom { margin-top: 2.2rem; }
+.project-info h3 { margin-top: 0; }
+.project-links a { border-bottom: 0; }
+.doc-source { border-top: 0; }
+.experience-item { grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 1.4rem; }
+.experience-when { margin-bottom: .15rem; }
+.publication-link { margin-left: 0; }
+.system-step h3 { margin-top: 0; }

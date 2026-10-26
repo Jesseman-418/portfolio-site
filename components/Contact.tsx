@@ -2,7 +2,6 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-inner">
-        <div className="section-kicker"><span>06</span><span>Start a conversation</span></div>
         <div className="contact-main">
           <h2>Have a good<br /><em>problem?</em></h2>
           <div className="contact-copy">
