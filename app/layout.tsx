@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import PointerField from "@/components/PointerField";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#faf8f5",
-  colorScheme: "light",
+  themeColor: "#101310",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -48,7 +49,10 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-sans bg-paper text-ink">{children}</body>
+      <body className="font-sans bg-paper text-ink">
+        <PointerField />
+        {children}
+      </body>
     </html>
   );
 }
