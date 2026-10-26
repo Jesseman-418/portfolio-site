@@ -1,4 +1,16 @@
-const projects = [
+type Project = {
+  number: string;
+  tag: string;
+  title: string;
+  summary: string;
+  detail: string;
+  stack: string;
+  github: string;
+  live?: string;
+  art: "gateway" | "oauth" | "docqa" | "meridius";
+};
+
+const projects: Project[] = [
   {
     number: "01",
     tag: "API SECURITY",
@@ -42,7 +54,7 @@ const projects = [
   },
 ];
 
-function ProjectArtwork({ art }) {
+function ProjectArtwork({ art }: { art: Project["art"] }) {
   if (art === "gateway") {
     return (
       <div className="art-window art-gateway" aria-hidden="true">
