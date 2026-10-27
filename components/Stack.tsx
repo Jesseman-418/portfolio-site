@@ -2,7 +2,7 @@ type Skill = {
   name: string;
   icon: string;
   color?: string;
-  custom?: "oauth" | "faiss" | "api";
+  custom?: "oauth" | "faiss" | "api" | "playwright";
 };
 
 const groups: Skill[][] = [
@@ -25,7 +25,7 @@ const groups: Skill[][] = [
     { name: "FAISS", icon: "", custom: "faiss" },
   ],
   [
-    { name: "Playwright", icon: "playwright", color: "2EAD33" },
+    { name: "Playwright", icon: "", custom: "playwright" },
     { name: "pytest", icon: "pytest", color: "0A9EDC" },
     { name: "Docker", icon: "docker", color: "2496ED" },
     { name: "Git", icon: "git", color: "F05032" },
@@ -35,6 +35,19 @@ const groups: Skill[][] = [
 ];
 
 function SkillLogo({ skill }: { skill: Skill }) {
+  if (skill.custom === "playwright") {
+    return (
+      <img
+        src="https://raw.githubusercontent.com/microsoft/playwright/main/packages/dashboard/public/playwright-logo.svg"
+        alt=""
+        width="24"
+        height="24"
+        loading="lazy"
+        decoding="async"
+      />
+    );
+  }
+
   if (skill.custom === "oauth") {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">
