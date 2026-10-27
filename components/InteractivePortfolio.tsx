@@ -124,19 +124,19 @@ export default function InteractivePortfolio() {
         <div className="hero-topline"><span>JESSEMAN’S CORNER OF THE INTERNET</span><span className="available"><i /> CHENNAI, INDIA <span className="live-clock">/ OPEN TO WHAT’S NEXT</span></span></div>
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="hero-intro">I’m Jesseman.</p>
-            <h1>I build things.<br /><em>Then find out</em><br />why they broke.</h1>
-            <p className="hero-description">Backend engineer, product builder, and founder of Meridius AI. I like difficult problems, clear interfaces, and getting past “it works on my machine.”</p>
+            <p className="hero-intro">Oh, hello.</p>
+            <h1>Jesseman<span className="hero-dot">.</span><br /><em>Writes code.</em><br />Calls strangers.</h1>
+            <p className="hero-description">Somehow, both are work. I build software and run Meridius AI, where I help local businesses get a better website. Based in Chennai.</p>
             <div className="hero-actions"><a className="button-primary" href="#work">See what I’ve made</a><a className="text-link" href="mailto:njessemandevamirtham@gmail.com">Say hello</a></div>
           </div>
           <aside className="desk" aria-label="A small corner of my desk">
             <motion.div className="desk-portrait" drag={!reduceMotion} dragConstraints={{left:-35,right:35,top:-25,bottom:25}} dragElastic={0.12} whileDrag={{rotate:0,scale:1.03}} style={{rotate: -7}}>
               <img src="https://avatars.githubusercontent.com/u/143321248?v=4" alt="Jesseman Devamirtham" width="320" height="320" draggable="false" />
-              <p>Jesseman. Usually debugging.</p>
+              <p>The person responsible for this website.</p>
             </motion.div>
-            <div className="desk-note"><span>A note to self</span><p>Make it work.<br />Make it clear.<br /><s>Go to sleep.</s><br />One more commit.</p></div>
-            <button className="desk-button" onClick={() => setMischief(n => n + 1)}>Definitely a serious button</button>
-            <p className="desk-reply" aria-live="polite">{["You can drag the photo. I’ll survive.", "Congratulations. You have pressed a button.", "Still a button. Very consistent software.", "This is now a relationship.", "Okay, back to the projects?"][mischief % 5]}</p>
+            <div className="desk-note"><span>Two parts of my day</span><p>Build the thing.<br />Explain the thing.<br />Convince someone<br />they need the thing.</p></div>
+            <button className="desk-button" onClick={() => setMischief(n => n + 1)}>Which hat am I wearing?</button>
+            <p className="desk-reply" aria-live="polite">{["Engineer: making requests behave.", "Founder: making the next cold call.", "Engineer: checking where the answer came from.", "Founder: explaining why a website matters."][mischief % 4]}</p>
           </aside>
         </div>
         <div className="hero-bottomline"><span>Code, experiments, and a few things that escaped localhost.</span><a href="#work">Keep going</a></div>
