@@ -74,7 +74,7 @@ export default function InteractivePortfolio(){
  const [sent,setSent]=useState(false);
  const [role,setRole]=useState(false);
  return <main id="home">
- <header className="nav"><a href="#home" className="logo" aria-label="Jesseman home">j.</a><nav aria-label="Main navigation" className={menu?'links expanded':'links'}><a href="#work" onClick={()=>setMenu(false)}>The work</a><a href="#about" onClick={()=>setMenu(false)}>The person</a><a href="mailto:njessemandevamirtham@gmail.com">Let’s talk</a></nav><button className="menu" onClick={()=>setMenu(!menu)} aria-expanded={menu}>{menu?'Close':'Menu'}</button></header>
+ <header className="nav"><a href="#home" className="logo" aria-label="Jesseman home">j.</a><nav aria-label="Main navigation" className={menu?'links expanded':'links'}><a href="#skills" onClick={()=>setMenu(false)}>Skills</a><a href="#work" onClick={()=>setMenu(false)}>The work</a><a href="#about" onClick={()=>setMenu(false)}>The person</a><a href="mailto:njessemandevamirtham@gmail.com">Let’s talk</a></nav><button className="menu" onClick={()=>setMenu(!menu)} aria-expanded={menu}>{menu?'Close':'Menu'}</button></header>
  <section className="hero" aria-labelledby="name">
   <div className="hello"><p>Software engineer. Founder. Chennai.</p><p>Good to have you here.</p></div>
   <div className="name-line"><h1 id="name">Jesseman</h1><button className="asterisk" onClick={()=>setPressed(pressed+1)} aria-label="Do not press" style={{transform:`rotate(${pressed*90}deg)`}}>✳</button></div>
