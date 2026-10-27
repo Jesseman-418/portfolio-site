@@ -591,3 +591,8 @@ body.has-live-cursor, body.has-live-cursor * { cursor: none !important; }
   .contact-main h2 { font-size: clamp(2.7rem, 12vw, 4.4rem); }
   .art-window { min-height: 250px; }
 }
+
+/* Keep mockups atmospheric and readable; remove residual microcopy. */
+.doc-source,
+.token-chip,
+.gateway-allow { display: none !important; }
