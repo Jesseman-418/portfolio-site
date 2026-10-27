@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
 type Project = {
   id: string;
@@ -80,18 +81,15 @@ const projects: Project[] = [
   },
 ];
 
-const filters = ["All work", "Backend", "AI & product", "Founder"] as const;
 
 export default function InteractivePortfolio() {
-  const [filter, setFilter] = useState<(typeof filters)[number]>("All work");
+  const [mischief, setMischief] = useState(0);
+  const reduceMotion = useReducedMotion();
   const [active, setActive] = useState<Project | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [pointer, setPointer] = useState({ x: 50, y: 40 });
 
-  const visible = useMemo(
-    () => filter === "All work" ? projects : projects.filter((project) => project.category === filter),
-    [filter],
-  );
+  const visible = projects;
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -118,35 +116,34 @@ export default function InteractivePortfolio() {
           <a href="#work" onClick={() => setMenuOpen(false)}>Selected work</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
-          <a className="nav-contact" href="#contact" onClick={() => setMenuOpen(false)}>Get in touch <span>↗</span></a>
+          <a className="nav-contact" href="#contact" onClick={() => setMenuOpen(false)}>Get in touch</a>
         </nav>
       </header>
 
       <section className="folio-hero" id="home">
-        <div className="hero-topline"><span>SOFTWARE ENGINEER · FOUNDER</span><span className="available"><i /> CHENNAI, INDIA <span className="live-clock">/ OPEN TO WHAT’S NEXT</span></span></div>
+        <div className="hero-topline"><span>JESSEMAN’S CORNER OF THE INTERNET</span><span className="available"><i /> CHENNAI, INDIA <span className="live-clock">/ OPEN TO WHAT’S NEXT</span></span></div>
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="hero-intro">I’m Jesseman.</p>
-            <h1>I make<br /><em>systems</em><br />make sense<span className="hero-dot">.</span></h1>
-            <p className="hero-description">I build dependable software, explore applied AI, and run Meridius AI — a studio helping businesses make better use of the web.</p>
-            <div className="hero-actions"><a className="button-primary" href="#work">Explore selected work <span>↘</span></a><a className="text-link" href="mailto:njessemandevamirtham@gmail.com">Start a conversation <span>↗</span></a></div>
+            <h1>I build things.<br /><em>Then find out</em><br />why they broke.</h1>
+            <p className="hero-description">Backend engineer, product builder, and founder of Meridius AI. I like difficult problems, clear interfaces, and getting past “it works on my machine.”</p>
+            <div className="hero-actions"><a className="button-primary" href="#work">See what I’ve made</a><a className="text-link" href="mailto:njessemandevamirtham@gmail.com">Say hello</a></div>
           </div>
-          <aside className="hero-art" aria-label="Interactive project constellation">
-            <div className="art-orbit orbit-a" /><div className="art-orbit orbit-b" />
-            <div className="orbit-label label-a">BACKEND SYSTEMS</div><div className="orbit-label label-b">APPLIED AI</div>
-            <div className="orbit-center"><span>JD</span><small>BUILD / LEARN / REPEAT</small></div>
-            <div className="orbit-node node-a">API</div><div className="orbit-node node-b">AI</div><div className="orbit-node node-c">UX</div>
-            <div className="art-caption">A practice across<br />product &amp; engineering</div>
+          <aside className="desk" aria-label="A small corner of my desk">
+            <motion.div className="desk-portrait" drag={!reduceMotion} dragConstraints={{left:-35,right:35,top:-25,bottom:25}} dragElastic={0.12} whileDrag={{rotate:0,scale:1.03}} style={{rotate: -7}}>
+              <img src="https://avatars.githubusercontent.com/u/143321248?v=4" alt="Jesseman Devamirtham" width="320" height="320" draggable="false" />
+              <p>Jesseman. Usually debugging.</p>
+            </motion.div>
+            <div className="desk-note"><span>A note to self</span><p>Make it work.<br />Make it clear.<br /><s>Go to sleep.</s><br />One more commit.</p></div>
+            <button className="desk-button" onClick={() => setMischief(n => n + 1)}>Definitely a serious button</button>
+            <p className="desk-reply" aria-live="polite">{["You can drag the photo. I’ll survive.", "Congratulations. You have pressed a button.", "Still a button. Very consistent software.", "This is now a relationship.", "Okay, back to the projects?"][mischief % 5]}</p>
           </aside>
         </div>
-        <div className="hero-bottomline"><span>FULL-STACK PRODUCT ENGINEERING</span><span>SECURE BACKENDS</span><span>APPLIED AI</span><span>↘ SCROLL TO EXPLORE</span></div>
+        <div className="hero-bottomline"><span>Code, experiments, and a few things that escaped localhost.</span><a href="#work">Keep going</a></div>
       </section>
 
       <section className="work-section" id="work">
-        <div className="section-head"><div><span className="section-index">01 / SELECTED WORK</span><h2>Built to be<br /><em>useful.</em></h2></div><p>Products and systems shaped around real constraints: security, evidence, reliability, and the people using them.</p></div>
-        <div className="filter-row" role="tablist" aria-label="Filter projects">
-          {filters.map((item) => <button key={item} role="tab" aria-selected={filter === item} className={filter === item ? "filter active" : "filter"} onClick={() => setFilter(item)}>{item}<span>{item === "All work" ? projects.length.toString().padStart(2, "0") : projects.filter((project) => project.category === item).length.toString().padStart(2, "0")}</span></button>)}
-        </div>
+        <div className="section-head"><div><span className="section-index">01 / SELECTED WORK</span><h2>Things I’ve<br /><em>actually made.</em></h2></div><p>Some let the right requests in. Some keep the wrong ones out. One is a company I started. Open a project for the details.</p></div>
         <div className="work-grid">
           {visible.map((project, index) => <button className="work-card" key={project.id} onClick={() => setActive(project)} style={{ "--accent": project.color, "--delay": `${index * 70}ms` } as React.CSSProperties} aria-label={`Open ${project.name} case study`}>
             <div className="card-art"><div className="art-index">{project.mark} <span>{project.category}</span></div>
@@ -162,23 +159,23 @@ export default function InteractivePortfolio() {
         </div>
       </section>
 
-      <section className="about-section" id="about"><div className="about-label"><span className="section-index">02 / HOW I WORK</span><span>Curiosity with follow-through.</span></div><div className="about-content"><h2>From first<br />principles to<br /><em>finished work.</em></h2><div className="about-copy"><p>I’m a Computer Science graduate from VIT Chennai. I’m drawn to the parts of building that need both careful thinking and practical execution: access control, data workflows, product decisions, and the details that help people trust software.</p><p>At Hyundai Motor India, I worked on telemetry dashboards and anomaly detection for more than 50 robotic welding machines. When a sensor failure disrupted the pipeline, I worked with floor engineers to help restore real-time monitoring within a day.</p><a className="text-link" href="https://www.linkedin.com/in/njd-jesse/" target="_blank" rel="noreferrer">A little more about me <span>↗</span></a></div></div></section>
+      <section className="about-section" id="about"><div className="about-label"><span className="section-index">02 / HOW I WORK</span><span>A person behind the pull requests.</span></div><div className="about-content"><h2>Hi again.<br />The slightly<br /><em>longer version.</em></h2><div className="about-copy"><p>I’m a Computer Science graduate from VIT Chennai. I’m drawn to the parts of building that need both careful thinking and practical execution: access control, data workflows, product decisions, and the details that help people trust software.</p><p>At Hyundai Motor India, I worked on telemetry dashboards and anomaly detection for more than 50 robotic welding machines. When a sensor failure disrupted the pipeline, I worked with floor engineers to help restore real-time monitoring within a day.</p><a className="text-link" href="https://www.linkedin.com/in/njd-jesse/" target="_blank" rel="noreferrer">A little more about me</a></div></div></section>
 
-      <section className="experience-section" id="experience"><div className="section-head experience-head"><div><span className="section-index">03 / EXPERIENCE</span><h2>Learning by<br /><em>shipping.</em></h2></div><a className="text-link" href="https://github.com/Jesseman-418" target="_blank" rel="noreferrer">Browse GitHub <span>↗</span></a></div>
+      <section className="experience-section" id="experience"><div className="section-head experience-head"><div><span className="section-index">03 / EXPERIENCE</span><h2>A few places<br /><em>I’ve learned things.</em></h2></div><a className="text-link" href="https://github.com/Jesseman-418" target="_blank" rel="noreferrer">Browse GitHub</a></div>
         <div className="timeline">
           <article><time>2025 — NOW</time><div><h3>Founder · Meridius AI</h3><p>Building an AI services company. Current focus: websites that help local businesses communicate clearly and get found.</p></div><span className="timeline-mark">01</span></article>
           <article><time>JUN — JUL 2025</time><div><h3>Software Engineering Intern · Hyundai Motor India</h3><p>Telemetry dashboards and anomaly detection for 50+ robotic weld machines; partnered with floor engineers on a rapid pipeline recovery.</p></div><span className="timeline-mark">02</span></article>
           <article><time>2022 — 2026</time><div><h3>B.Tech, Computer Science · VIT Chennai</h3><p>Focused on software engineering, AI, and robotics. Published undergraduate research on location-aware contact tracing.</p></div><span className="timeline-mark">03</span></article>
         </div>
-        <a className="publication" href="https://ieeexplore.ieee.org/document/10537381" target="_blank" rel="noreferrer"><span>PUBLICATION / IEEE</span><strong>Leveraging Location Data for Enhanced Contact Tracing in Educational Settings</strong><span>READ PAPER ↗</span></a>
+        <a className="publication" href="https://ieeexplore.ieee.org/document/10537381" target="_blank" rel="noreferrer"><span>PUBLICATION / IEEE</span><strong>Leveraging Location Data for Enhanced Contact Tracing in Educational Settings</strong><span>READ PAPER</span></a>
       </section>
 
-      <section className="contact-section" id="contact"><div><span className="section-index">04 / YOUR TURN</span><h2>Have a good<br /><em>problem?</em></h2></div><div className="contact-copy"><p>I’m open to product engineering roles and thoughtful collaborations. Tell me what you’re working on.</p><a className="contact-email" href="mailto:njessemandevamirtham@gmail.com">njessemandevamirtham@gmail.com <span>↗</span></a><div className="contact-socials"><a href="https://github.com/Jesseman-418" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/njd-jesse/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></section>
-      <footer className="folio-footer"><a className="wordmark" href="#home"><span className="wordmark-symbol">J<span>.</span></span><span>Jesseman<br />Devamirtham</span></a><span>DESIGNED &amp; BUILT WITH INTENTION · © {new Date().getFullYear()}</span><a href="#home">BACK TO TOP ↑</a></footer>
+      <section className="contact-section" id="contact"><div><span className="section-index">04 / YOUR TURN</span><h2>Got something<br /><em>worth building?</em></h2></div><div className="contact-copy"><p>I’m open to product engineering roles and thoughtful collaborations. Tell me what you’re working on.</p><a className="contact-email" href="mailto:njessemandevamirtham@gmail.com">njessemandevamirtham@gmail.com</a><div className="contact-socials"><a href="https://github.com/Jesseman-418" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/njd-jesse/" target="_blank" rel="noreferrer">LinkedIn</a></div></div></section>
+      <footer className="folio-footer"><a className="wordmark" href="#home"><span className="wordmark-symbol">J<span>.</span></span><span>Jesseman<br />Devamirtham</span></a><span>THANKS FOR SCROLLING THIS FAR · © {new Date().getFullYear()}</span><a href="#home">BACK TO TOP</a></footer>
 
       {active && <div className="case-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setActive(null); }}>
         <section className="case-dialog" role="dialog" aria-modal="true" aria-labelledby="case-title">
-          <button className="case-close" onClick={() => setActive(null)} aria-label="Close case study">×</button><span className="section-index">{active.mark} / {active.category.toUpperCase()} / {active.year}</span><h2 id="case-title">{active.name}</h2><p>{active.details}</p><div className="case-stack">{active.stack.map((item) => <span key={item}>{item}</span>)}</div><div className="case-links"><a href={active.repo} target="_blank" rel="noreferrer">View source code ↗</a>{active.live && <a href={active.live} target="_blank" rel="noreferrer">Open live site ↗</a>}</div>
+          <button className="case-close" onClick={() => setActive(null)} aria-label="Close case study">×</button><span className="section-index">{active.mark} / {active.category.toUpperCase()} / {active.year}</span><h2 id="case-title">{active.name}</h2><p>{active.details}</p><div className="case-stack">{active.stack.map((item) => <span key={item}>{item}</span>)}</div><div className="case-links"><a href={active.repo} target="_blank" rel="noreferrer">View source code</a>{active.live && <a href={active.live} target="_blank" rel="noreferrer">Open live site</a>}</div>
         </section>
       </div>}
 
@@ -208,6 +205,23 @@ export default function InteractivePortfolio() {
         @media(max-width:850px){.hero-grid{grid-template-columns:1fr .75fr;gap:10px}.hero-copy h1{font-size:clamp(64px,11vw,110px)}.hero-art{min-height:300px}.hero-bottomline span:nth-child(2){display:none}.section-head{align-items:start;flex-direction:column}.section-head>p{max-width:500px}.about-content{gap:6vw}.publication{grid-template-columns:120px 1fr auto;gap:12px}}
         @media(max-width:640px){.folio-nav{height:70px;padding:0 22px}.menu-toggle{display:flex;flex-direction:column;gap:5px;background:none;border:0;padding:12px;cursor:pointer}.menu-toggle i{display:block;width:22px;height:1px;background:var(--folio-ink)}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;z-index:5;background:#171813;border-bottom:1px solid var(--folio-line);padding:24px;flex-direction:column;align-items:stretch;gap:0}.nav-links.nav-open{display:flex}.nav-links a{padding:15px 4px;border-bottom:1px solid var(--folio-line)}.nav-links .nav-contact{border-bottom:1px solid var(--folio-acid);margin-top:10px}.folio-hero{min-height:calc(100svh - 70px);padding:22px 22px}.hero-topline{font-size:8px}.available{gap:6px}.live-clock{display:none}.hero-grid{grid-template-columns:1fr;margin:9vh auto 4vh;gap:18px}.hero-copy h1{font-size:clamp(66px,15vw,105px)}.hero-intro{margin-bottom:18px}.hero-description{font-size:15px;margin-top:23px;max-width:410px}.hero-art{height:280px;min-height:280px;max-width:420px;width:100%;margin:auto}.orbit-a{width:240px}.orbit-b{width:175px}.orbit-center{width:105px;height:105px}.orbit-center>span{font-size:34px}.label-a{left:0}.label-b{right:0}.hero-bottomline{font-size:8px;flex-wrap:wrap}.hero-bottomline span:nth-child(2),.hero-bottomline span:nth-child(3){display:none}.work-section,.about-section,.experience-section,.contact-section{padding:90px 22px}.section-head{margin-bottom:36px}.section-head h2,.about-content h2,.contact-section h2{font-size:clamp(58px,14vw,88px)}.filter-row{margin-right:-22px}.work-grid{grid-template-columns:1fr;gap:25px}.card-art{height:300px}.card-info h3{font-size:16px}.about-label{align-items:flex-start;gap:20px}.about-label>span:last-child{text-align:right}.about-content{grid-template-columns:1fr;gap:32px;margin-top:45px}.timeline article{grid-template-columns:1fr 28px;gap:11px;padding:20px 0}.timeline time{grid-column:1/-1}.timeline-mark{grid-column:2;grid-row:2}.timeline h3{font-size:15px}.publication{grid-template-columns:1fr auto;gap:10px}.publication strong{grid-column:1/-1;grid-row:2;line-height:1.5}.folio-footer{padding:25px 22px;flex-wrap:wrap;gap:20px}.folio-footer>span{order:3;width:100%}.contact-section{grid-template-columns:1fr;gap:20px}.contact-email{font-size:16px}.hero-actions{gap:18px}.button-primary{padding:13px 12px}.text-link{font-size:11px}}
         @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+        /* Personal desk direction: warm, readable, tactile, no neon dashboard chrome. */
+        :root{--folio-bg:#f2eee5;--folio-ink:#262820;--folio-muted:#696d60;--folio-line:#26282030;--folio-acid:#49633b}
+        body{background:#f2eee5!important;color:#262820!important}.cursor-orb{display:none!important}
+        .folio{background:#f2eee5;color:#262820;font-family:var(--font-sans),sans-serif}
+        .folio-nav{height:100px;border:0}.nav-links,.hero-topline,.hero-bottomline{color:#5b6054}.nav-contact{color:#262820!important}
+        .hero-grid{grid-template-columns:1.2fr .8fr;gap:30px;margin:65px auto 80px}.hero-copy h1{font-size:clamp(52px,6.7vw,100px);line-height:1.04;letter-spacing:-.065em}.hero-copy h1 em{color:#49633b}
+        .hero-description{color:#555d4f;max-width:440px}.hero-bottomline{font:14px/1.6 var(--font-sans),sans-serif;letter-spacing:0}.hero-intro{font-size:18px}.live-clock{display:none}
+        .button-primary{background:#344b2a;color:#fff;border-radius:6px;padding:17px 22px}.button-primary:hover{background:#49633b}.text-link{color:#344b2a}
+        .desk{position:relative;min-height:480px;padding:25px 0}.desk-portrait{position:relative;z-index:2;width:75%;background:#fff;padding:14px 14px 1px;box-shadow:0 12px 22px #292a1918;cursor:grab;touch-action:none}.desk-portrait:active{cursor:grabbing}.desk-portrait img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;filter:saturate(.7)}.desk-portrait p{font:italic 18px Georgia,serif;color:#454938;text-align:center}
+        .desk-note{position:absolute;right:-10px;top:240px;z-index:3;background:#e8cc73;padding:20px 25px;transform:rotate(9deg);box-shadow:2px 6px 12px #292a1914}.desk-note>span{font:12px var(--font-sans),sans-serif}.desk-note p{font:italic 19px/1.5 Georgia,serif;color:#3c3d29;margin:10px 0}.desk-button{position:relative;margin:75px 0 0;background:#d96b4b;border:0;border-bottom:4px solid #a54930;border-radius:7px;padding:15px 20px;color:#fff;cursor:pointer;transform:rotate(-3deg);transition:transform .2s}.desk-button:active{transform:translateY(3px) rotate(-3deg);border-bottom-width:1px}.desk-reply{font:14px/1.5 var(--font-sans),sans-serif;color:#676b5e;min-height:42px;max-width:230px}
+        .section-index,.art-index,.card-year,.hero-topline .available,.contact-socials{font-size:12px;letter-spacing:0}.section-head h2,.about-content h2,.contact-section h2{font-size:clamp(45px,6vw,82px);line-height:1.05;letter-spacing:-.055em}.section-head>p,.about-copy p,.timeline p,.contact-copy p{color:#555d4f;font-size:16px}.section-head h2 em,.about-content h2 em,.contact-section h2 em{color:#49633b}
+        .work-grid{display:block}.work-card{display:grid;grid-template-columns:180px 1fr;gap:35px;width:100%;border-top:1px solid #26282030;padding:30px 0;align-items:center}.card-art{height:135px;border-radius:4px;background:#dedbce}.card-art>div:not(.art-index){display:none}.card-art .art-index{inset:0;display:grid;place-items:center;font:italic 55px Georgia,serif;color:#49633b}.art-index span,.card-open{display:none}.card-info{padding:0}.card-info h3{font-size:clamp(23px,3vw,34px);font-family:Georgia,serif}.card-info p{color:#626659;font-size:15px;max-width:580px}.work-card:hover .card-art{transform:rotate(-4deg)}.work-card:hover h3{color:#49633b}.publication strong{font-size:15px}.publication span{color:#49633b}.timeline h3{font-size:20px}.folio-footer{color:#626659}
+        .case-dialog{background:#f2eee5;color:#262820}.case-dialog>p{color:#555d4f}.case-stack span{color:#344b2a;border-color:#344b2a44}.case-close{color:#344b2a}.case-links a{color:#344b2a}
+        @media(max-width:850px){.hero-grid{grid-template-columns:1fr}.desk{max-width:400px;width:100%;margin:30px auto}.hero-copy h1{font-size:clamp(48px,9vw,85px)}}
+        @media(max-width:640px){.nav-links{background:#f2eee5}.menu-toggle i{background:#262820}.hero-grid{margin:45px auto}.desk-note{right:0;top:200px}.desk{min-height:460px;max-width:330px}.desk-button{margin-top:95px}.work-card{grid-template-columns:65px 1fr;gap:18px}.card-art{height:85px}.card-art .art-index{font-size:35px}.card-info{display:block}.card-info h3{font-size:23px}.card-info p{font-size:14px}.card-year{display:none}.hero-bottomline{display:block}.hero-bottomline a{display:inline-block;margin-top:10px}.hero-description{font-size:16px}.section-head h2,.about-content h2,.contact-section h2{font-size:48px}}
+
       `}</style>
     </main>
   );
