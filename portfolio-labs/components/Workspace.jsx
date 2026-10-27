@@ -235,7 +235,11 @@ export default function Workspace() {
         if (error) throw new Error(`Retrieval failed: ${error.message}`);
         candidates = (data || []).map((chunk) => ({ ...chunk, semantic_score: Number(chunk.similarity) }));
       } else {
-        candidates = normalizeChunkRows(selectedDoc).map((chunk) => ({ ...chunk, document_id: selectedDoc.id, semantic_score: 0 }));
+        candidates = await Promise.all(normalizeChunkRows(selectedDoc).map(async (chunk) => {
+          const embedding = chunk.embedding || await embedText(chunk.content);
+          const similarity = vector.reduce((sum, value, index) => sum + value * embedding[index], 0);
+          return { ...chunk, document_id: selectedDoc.id, semantic_score: similarity };
+        }));
       }
       candidates = candidates.map((chunk) => {
         const lexical_score = lexicalScore(question, chunk.content);
