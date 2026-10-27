@@ -23,7 +23,7 @@ export default function PointerField() {
 
     const onOver = (event: PointerEvent) => {
       if (event.pointerType !== "mouse") return;
-      cursor.classList.toggle("is-hot", Boolean((event.target as Element).closest("a, button, [role='tab']")));
+      cursor.classList.toggle("is-hot", Boolean((event.target as Element).closest("a, button, [role='tab'], [data-cursor='link']")));
     };
 
     const onOut = (event: PointerEvent) => {
