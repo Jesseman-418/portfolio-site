@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, JetBrains_Mono, Manrope } from "next/font/google";
+import PointerField from "@/components/PointerField";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -48,7 +49,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${manrope.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <PointerField />
+        {children}
+      </body>
     </html>
   );
 }
