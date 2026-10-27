@@ -314,6 +314,7 @@ export default function Workspace() {
       <aside className="sidebar">
         <a className="brand" href="#top" aria-label="DocQA Workspace home"><span className="brand-icon">D</span><span>Jesseman Labs</span></a>
         <div className="sidebar-heading">Workspace</div>
+        <a className="lab-nav" href="/journey">02 <span>Customer journey studio</span></a>
         <label className="field-label" htmlFor="collection-filter">Collection</label>
         <select id="collection-filter" value={collection} onChange={(event) => { setCollection(event.target.value); setAnswer(null); }}>
           <option>All collections</option>

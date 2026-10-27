@@ -57,6 +57,18 @@ create table if not exists public.lab_journey_events (
   occurred_at timestamptz not null default now()
 );
 
+create table if not exists public.lab_journey_jobs (
+  id uuid primary key default gen_random_uuid(),
+  owner_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  journey_id uuid not null references public.lab_journeys(id) on delete cascade,
+  contact_id text not null,
+  status text not null default 'queued' check (status in ('queued','running','completed','failed')),
+  scheduled_for timestamptz not null default now(),
+  completed_at timestamptz,
+  result jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now()
+);
+
 create table if not exists public.lab_webhook_endpoints (
   id uuid primary key default gen_random_uuid(),
   owner_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
@@ -159,7 +171,7 @@ declare
   table_name text;
 begin
   foreach table_name in array array[
-    'lab_documents', 'lab_document_queries', 'lab_document_chunks', 'lab_journeys', 'lab_journey_events',
+    'lab_documents', 'lab_document_queries', 'lab_document_chunks', 'lab_journeys', 'lab_journey_events', 'lab_journey_jobs',
     'lab_webhook_endpoints', 'lab_webhook_deliveries', 'lab_agent_runs',
     'lab_maintenance_predictions', 'lab_ticket_classifications',
     'lab_product_analytics_runs', 'lab_service_analytics_runs', 'lab_elt_runs',
@@ -192,6 +204,8 @@ end $$;
 
 create index if not exists lab_documents_owner_created_idx on public.lab_documents(owner_id, created_at desc);
 create index if not exists lab_journeys_owner_updated_idx on public.lab_journeys(owner_id, updated_at desc);
+create index if not exists lab_journey_jobs_owner_created_idx on public.lab_journey_jobs(owner_id, created_at desc);
+create index if not exists lab_journey_jobs_journey_idx on public.lab_journey_jobs(journey_id);
 create index if not exists lab_webhook_deliveries_owner_created_idx on public.lab_webhook_deliveries(owner_id, created_at desc);
 create index if not exists lab_agent_runs_owner_created_idx on public.lab_agent_runs(owner_id, created_at desc);
 create index if not exists lab_stream_events_owner_occurred_idx on public.lab_stream_events(owner_id, occurred_at desc);
