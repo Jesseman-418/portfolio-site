@@ -656,3 +656,9 @@ body.has-live-cursor, body.has-live-cursor * { cursor: none !important; }
   inset: -11px;
   opacity: 1;
 }
+
+.skill-chip b.skill-logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: .28rem;
+}
