@@ -4,13 +4,13 @@ let pipelinePromise;
 
 async function getPipeline(onProgress) {
   if (!pipelinePromise) {
-    pipelinePromise = import("@huggingface/transformers").then(({ pipeline, env }) => {
+    pipelinePromise = import(/* webpackIgnore: true */ "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.1/dist/transformers.web.js").then(({ pipeline, env }) => {
       env.allowLocalModels = false;
       env.useBrowserCache = true;
       return pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2", {
         progress_callback: onProgress,
       });
-    });
+    }).catch((error) => { pipelinePromise = null; throw error; });
   }
   return pipelinePromise;
 }
