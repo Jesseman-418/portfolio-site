@@ -4,7 +4,7 @@ let pipelinePromise;
 
 async function getPipeline(onProgress) {
   if (!pipelinePromise) {
-    pipelinePromise = import(/* webpackIgnore: true */ "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.1/dist/transformers.web.js").then(({ pipeline, env }) => {
+    pipelinePromise = import(/* webpackIgnore: true */ "https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2/dist/transformers.min.js").then(({ pipeline, env }) => {
       env.allowLocalModels = false;
       env.useBrowserCache = true;
       return pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2", {
