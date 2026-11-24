@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Jesseman Devamirtham — Full-Stack Engineer",
   description:
-    "Full-stack engineer in Chennai. I design and ship complete production systems — React/Next.js front ends, Node & FastAPI back ends, Postgres data layers, Web3 wallet flows. AI/ML research published in IEEE Xplore.",
+    "Software engineer and VIT Chennai Computer Science graduate. Backend, full-stack and applied AI projects; founder of Meridius AI, former Hyundai intern, and IEEE co-author.",
   keywords: [
     "full-stack engineer",
     "Jesseman Devamirtham",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jesseman Devamirtham — Full-Stack Engineer",
     description:
-      "I design and ship complete production systems. Front to back, schema to deploy. Web3 + AI-native.",
+      "Software engineering, backend systems, and applied AI. VIT Chennai graduate, Meridius AI founder, and IEEE co-author.",
     type: "website",
     locale: "en_US",
   },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jesseman Devamirtham — Full-Stack Engineer",
     description:
-      "I design and ship complete production systems. Front to back, schema to deploy. Web3 + AI-native.",
+      "Software engineering, backend systems, and applied AI. VIT Chennai graduate, Meridius AI founder, and IEEE co-author.",
   },
   robots: { index: true, follow: true },
 };

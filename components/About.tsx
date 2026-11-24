@@ -9,36 +9,36 @@ export default function About() {
 
           <div className="md:col-span-6 space-y-7 text-lg leading-relaxed text-ink/85">
             <p className="display-text text-3xl md:text-4xl leading-tight text-ink mb-2">
-              I design and ship production systems
+              I build useful software
               <span className="text-cobalt"> end to end.</span>
             </p>
 
             <p>
-              Not CRUD wrappers — auth servers built from primitives, API
-              gateways with rate-limited token introspection, real-time data
-              pipelines that hold up in prod. The unglamorous parts most
-              portfolios skip: data integrity, edge cases, deploy reliability.
+              My work spans secure APIs, web applications, industrial dashboards,
+              and AI-powered document tools. I care about clear interfaces,
+              reliable data, testable behavior, and explaining the decisions
+              behind an implementation.
             </p>
 
             <p>
-              Stack discipline: TypeScript on Next.js for the front end,
-              Node or FastAPI for the back, PostgreSQL with Prisma for the
-              schema layer, Redis for state. JWT, OAuth 2.0, RBAC done right.
-              Web3 via ethers.js and MetaMask.
-              Containerized deploys.
+              React and Next.js for interfaces; Node.js, Express, and FastAPI
+              for services; PostgreSQL and SQLite for data. My API gateway
+              and authorization server cover JWT/JWKS, OAuth 2.0, PKCE, and
+              access policies, with 78 automated tests across the two projects.
             </p>
 
             <p>
-              AI-native by default. Published one IEEE Xplore paper during
-              undergrad on geospatial contact tracing with ball-tree indexing.
-              Capstone in progress on Vision Transformer activation functions.
-              PyTorch + Hugging Face + LLM APIs as default tooling, not
-              buzzwords.
+              I co-authored an IEEE Xplore paper on location-based contact
+              tracing using BallTree search. My applied AI work includes
+              document retrieval, data-cleaning agent environments, and
+              multi-agent adversarial defense. Away from code, I follow
+              football, FC Barcelona, and Messi.
             </p>
 
             <p className="text-ink/60 pt-2">
-              Final-year Computer Science at VIT Chennai. Open to full-time
-              roles starting mid-2026.
+              Computer Science graduate from VIT Chennai, specializing in
+              AI & Robotics. Open to full-time software engineering roles
+              and freelance collaborations.
             </p>
           </div>
 
@@ -58,16 +58,16 @@ export default function About() {
             <div>
               <div className="num-marker mb-2">Education</div>
               <div className="text-ink/80">
-                B.Tech CSE
+                B.Tech CSE · AI & Robotics
                 <br />
-                <span className="text-ink/50">VIT Chennai · 2022–2026</span>
+                <span className="text-ink/50">VIT Chennai · Sep 2022–Aug 2026</span>
               </div>
             </div>
             <div>
               <div className="num-marker mb-2">Recognition</div>
               <ul className="text-ink/80 space-y-1">
                 <li>IEEE Xplore published</li>
-                <li>Scaler × Meta finalist</li>
+                <li>Founder, Meridius AI</li>
                 <li>Hyundai Motor India intern</li>
               </ul>
             </div>

@@ -1,59 +1,118 @@
 const cases = [
   {
-    n: "01",
-    title: "PollChain",
-    summary: "Decentralized voting dApp with MetaMask wallet auth, live on-chain vote counting, and a no-wallet demo mode. Six routes, animated real-time results.",
-    problem: "Web3 UX is the wall most users hit — wallet connection, transaction states, and on-chain latency break the interface if the frontend isn't built for them.",
-    solution: "Built the full frontend in Next.js 14 + TypeScript: ethers.js wallet integration, React Context for chain state, animated progress bars driven by live vote data, and a demo fallback so anyone can explore without a wallet.",
-    stack: ["Next.js 14", "React", "TypeScript", "ethers.js", "MetaMask", "Tailwind"],
-    github: "https://github.com/Jesseman-418/Pollchain-frontend",
-    live: "https://pollchain-frontend.vercel.app",
-    tag: "Web3 · dApp",
+    "n": "01",
+    "title": "Zero-Trust API Gateway",
+    "summary": "Identity-aware reverse proxy with authentication, access policies, rate limiting, and upstream resilience.",
+    "problem": "APIs need consistent identity checks and access controls while handling upstream failures.",
+    "solution": "Implemented JWT/JWKS verification, RBAC/ABAC policies, per-user rate limiting, circuit breakers, health checks, and request/error metrics. Added 25 automated tests and setup documentation.",
+    "stack": [
+      "Node.js",
+      "Express",
+      "JWT / JWKS",
+      "RBAC / ABAC"
+    ],
+    "github": "https://github.com/Jesseman-418/zero-trust-api-gateway",
+    "live": null,
+    "tag": "Backend · Security"
   },
   {
-    n: "02",
-    title: "TaskFlow",
-    summary: "Full-stack Kanban board with native drag-and-drop, multi-board management, and type-safe server-driven mutations. Strict-mode TypeScript throughout.",
-    problem: "Drag-and-drop boards get janky fast — optimistic UI, persistence, and re-render control fight each other once state grows.",
-    solution: "Built on Next.js 14 App Router with Server Actions for every mutation, native HTML5 drag-and-drop, a priority/label/due-date task model, search + filter, and Prisma migrations. No client-state library — server actions keep it type-safe end to end.",
-    stack: ["Next.js 14", "TypeScript (strict)", "Server Actions", "Prisma", "SQLite", "Tailwind"],
-    github: "https://github.com/Jesseman-418/taskflow",
-    live: null,
-    tag: "Interactive UI",
+    "n": "02",
+    "title": "OAuth 2.0 / OpenID Connect Server",
+    "summary": "An authorization server with PKCE, signed tokens, and refresh-token reuse detection.",
+    "problem": "Applications need clear authorization flows and token lifecycle controls to protect API access.",
+    "solution": "Implemented authorization-code and client-credentials flows, PKCE, and refresh-token reuse detection with modular routes, middleware, and database operations. Added 53 automated tests.",
+    "stack": [
+      "Node.js",
+      "Express",
+      "SQLite",
+      "OAuth 2.0",
+      "OpenID Connect"
+    ],
+    "github": "https://github.com/Jesseman-418/oauth2-authorization-server",
+    "live": null,
+    "tag": "Identity · Backend"
   },
   {
-    n: "03",
-    title: "NexusFlow AI",
-    summary: "High-performance marketing + onboarding site for an AI workflow platform. Lighthouse 98 / 100 / 100 / 100, custom animation system, type-safe content layer.",
-    problem: "Client needed an enterprise-grade, founder-facing site that loads instantly and holds up under scrutiny — shipped in under two weeks.",
-    solution: "Next.js App Router with a type-safe content layer, a hand-built Framer Motion animation system, and ICP-tuned copy. Tuned to a near-perfect Lighthouse score across all four axes.",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion", "Vercel"],
-    github: "https://github.com/Jesseman-418/nexusflow-ai",
-    live: "https://nexusflow-ai.vercel.app",
-    tag: "Performance",
+    "n": "03",
+    "title": "DocQA-AI",
+    "summary": "Document question answering with semantic search, persistent indexing, and source citations.",
+    "problem": "Finding useful answers in documents requires retrieval that makes the supporting evidence easy to inspect.",
+    "solution": "Built PDF, TXT, and Markdown ingestion with 384-dimensional sentence embeddings and FAISS indexing. Added source citations, optional OpenAI answers, and pytest coverage for chunking, retrieval, and answer generation.",
+    "stack": [
+      "Python",
+      "FAISS",
+      "Streamlit",
+      "pytest"
+    ],
+    "github": "https://github.com/Jesseman-418/docqa-ai",
+    "live": null,
+    "tag": "Applied AI · Retrieval"
   },
   {
-    n: "04",
-    title: "VitalEdge Fitness",
-    summary: "Coaching SaaS with client dashboards, programming, and Stripe payment flows. Built solo, end to end — the premium-user systems a token economy needs, minus the chain.",
-    problem: "Client ran the whole business on DMs, Google Docs, and Stripe payment links. No dashboard, no billing logic, no source of truth.",
-    solution: "Built the full product: typed dashboards for clients and programs, Stripe Connect split payments, scheduled reminder jobs, and a Prisma schema that won't bite in month six.",
-    stack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Stripe", "Vercel"],
-    github: "https://github.com/Jesseman-418/vitaledge-fitness",
-    live: "https://vitaledge-fitness.vercel.app",
-    tag: "Dashboards · Payments",
+    "n": "04",
+    "title": "Meridius AI",
+    "summary": "My website, digital-services, and small-business automation venture.",
+    "problem": "Recurring business tasks and unclear digital interfaces create avoidable manual work.",
+    "solution": "Develop websites and repeatable automation workflows. Built a Python and Playwright lead-sourcing pipeline to replace repetitive prospect research, alongside service presentation and interface development.",
+    "stack": [
+      "Python",
+      "Playwright",
+      "Web development",
+      "Automation"
+    ],
+    "github": "https://github.com/Jesseman-418/meridius-ai",
+    "live": "https://meridius-ai.vercel.app/",
+    "tag": "Venture · Automation"
   },
   {
-    n: "05",
-    title: "Kaval",
-    summary: "Shipped production frontend for an AI digital-safety agent that sits between the user and the internet. Built on the latest Next.js, live in production.",
-    problem: "A new AI product needs a frontend that explains an unfamiliar concept fast and converts — on a bleeding-edge Next.js with breaking API changes.",
-    solution: "Built the production site on Next.js 16 App Router, reading the framework's own docs to ship against APIs newer than most tooling supports. Clean, fast, conversion-tuned.",
-    stack: ["Next.js 16", "React", "TypeScript", "Tailwind", "Vercel"],
-    github: "https://github.com/Jesseman-418/kaval",
-    live: "https://kaval.chat",
-    tag: "Product",
+    "n": "05",
+    "title": "Multi-Agent Adversarial Defense",
+    "summary": "Final-year work exploring reinforcement-learning agents that defend image classifiers against adversarial attacks.",
+    "problem": "Small FGSM and PGD perturbations can cause image classifiers to produce incorrect predictions.",
+    "solution": "Explored coordinated PPO-based defense agents on MNIST using Python and PyTorch. The linked repository documents a related adversarial-training implementation; experimental results depend on the specific setup.",
+    "stack": [
+      "Python",
+      "PyTorch",
+      "PPO",
+      "MNIST",
+      "FGSM / PGD"
+    ],
+    "github": "https://github.com/Jesseman-418/adversarial-marl-defense",
+    "live": null,
+    "tag": "Research · Model Robustness"
   },
+  {
+    "n": "06",
+    "title": "OpenEnv Data Cleaning Environment",
+    "summary": "An environment for evaluating agents on structured data-cleaning tasks.",
+    "problem": "Agents need repeatable tasks that expose format errors, missing values, typos, and multi-step cleaning challenges.",
+    "solution": "Developed tasks for easy format standardization, missing values and typos, and a complete cleaning pipeline, with an environment for running and evaluating agent actions.",
+    "stack": [
+      "Python",
+      "OpenEnv",
+      "pandas",
+      "Agent evaluation"
+    ],
+    "github": "https://github.com/Jesseman-418/data-cleaning-env",
+    "live": "https://jesse1811-data-cleaning-env.hf.space/web/",
+    "tag": "Applied AI · Data"
+  },
+  {
+    "n": "07",
+    "title": "Location-Based Contact Tracing",
+    "summary": "IEEE-published research: Leveraging Location Data for Enhanced Contact Tracing in Educational Settings.",
+    "problem": "Identifying nearby records in educational location datasets calls for efficient proximity search.",
+    "solution": "Used BallTree nearest-neighbour search and Python analysis to identify proximity relationships. Co-authored with Sakshi Ashish Kedia and Harishankar S, mentored by Sudheer Kumar Erramchetty at VIT Chennai.",
+    "stack": [
+      "Python",
+      "BallTree",
+      "scikit-learn",
+      "pandas"
+    ],
+    "github": "https://github.com/Jesseman-418/Contact-Tracing-using-Ball-tree-Algorithm",
+    "live": "https://ieeexplore.ieee.org/document/10537381",
+    "tag": "IEEE Publication · Research"
+  }
 ];
 
 export default function Projects() {
@@ -69,9 +128,9 @@ export default function Projects() {
               Selected work<span className="text-cobalt">.</span>
             </h2>
             <p className="text-lg text-ink/70 max-w-xl leading-snug">
-              Five builds across Web3, real-time interfaces, and production
-              frontends — wallet integration, server-driven state, sub-second
-              loads. Each one shipped.
+              Seven projects across backend security, full-stack development,
+              automation, and applied AI. The problem, the implementation,
+              and the technology behind each one.
             </p>
           </div>
         </div>

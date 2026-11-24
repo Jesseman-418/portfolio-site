@@ -16,9 +16,9 @@ export default function Contact() {
             </h2>
 
             <p className="text-xl md:text-2xl text-paper/80 max-w-2xl mb-16 leading-snug font-light">
-              Open to full-time engineering roles starting mid-2026, and
-              selective client builds in the interim. The fastest path is
-              email.
+              Open to full-time software engineering roles and freelance
+              projects in web development, backend systems, and applied AI.
+              The fastest way to reach me is email.
             </p>
 
             <ul className="space-y-5 text-lg">
@@ -56,12 +56,12 @@ export default function Contact() {
               <li className="flex items-baseline gap-6">
                 <span className="num-marker text-paper-300">Studio</span>
                 <a
-                  href="https://stratum-three.vercel.app"
+                  href="https://meridius-ai.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-paper hover:text-cobalt-400 underline decoration-paper/30 decoration-1 underline-offset-4 transition-colors"
                 >
-                  stratum-three.vercel.app ↗
+                  meridius-ai.vercel.app ↗
                 </a>
               </li>
             </ul>

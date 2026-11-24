@@ -1,32 +1,39 @@
 const timeline = [
   {
-    when: "2026 — Present",
-    role: "Founder",
-    org: "Stratum",
-    what: "Custom AI operating systems for solo operators — Claude Code workspaces with skills, commands, hooks, and automations, governed by one config. One-time builds across four tiers.",
-    href: "https://stratum-three.vercel.app",
+    "when": "May 2025 — Present",
+    "role": "Founder",
+    "org": "Meridius AI",
+    "what": "Develop automation systems for small businesses, turning recurring tasks into repeatable software workflows. Built a Python and Playwright lead-sourcing pipeline to replace repetitive manual prospect research, alongside website and digital-service work.",
+    "href": "https://meridius-ai.vercel.app/"
   },
   {
-    when: "Summer 2025",
-    role: "Intern — Digital ME",
-    org: "Hyundai Motor India",
-    what: "Data analysis + error correction on 590+ robotic systems across the production line. Python, SQL, IIoT data pipelines.",
-    href: null,
+    "when": "Jun — Jul 2025",
+    "role": "Software Engineering Intern",
+    "org": "Hyundai Motor India",
+    "what": "Built dashboards and anomaly-detection pipelines for telemetry from 50+ robotic weld machines, supporting ISO audit work. Diagnosed a critical sensor failure with floor engineers and restored the real-time data pipeline within 24 hours.",
+    "href": null
   },
   {
-    when: "2024 — Present",
-    role: "Independent Engineer",
-    org: "Client work",
-    what: "Built and shipped 4 client SaaS platforms (NexusFlow AI, Solara Studio, VitalEdge Fitness, Artisan Eats). End-to-end from schema design through Vercel deployment.",
-    href: null,
+    "when": "Project-based",
+    "role": "Independent Development & Copywriting",
+    "org": "Freelance",
+    "what": "Develop websites for small businesses and write email marketing for coaching businesses, translating open-ended briefs into useful digital experiences and clear communication.",
+    "href": null
   },
   {
-    when: "2022 — 2026",
-    role: "B.Tech Computer Science",
-    org: "VIT Chennai",
-    what: "Final year. Focus on systems, distributed computing, and applied ML. Published one paper in IEEE Xplore during undergrad on geospatial contact tracing with ball-tree indexing. Capstone in progress on Vision Transformer activation functions.",
-    href: null,
+    "when": "During my B.Tech",
+    "role": "Marketing Lead",
+    "org": "Sports Club, VIT Chennai",
+    "what": "Led event promotion, registrations, and student engagement. Additional campus leadership includes marketing and crowd coordination for VOYAGE’24.",
+    "href": null
   },
+  {
+    "when": "Sep 2022 — Aug 2026",
+    "role": "B.Tech Computer Science & Engineering",
+    "org": "VIT Chennai",
+    "what": "Graduated with a specialization in AI & Robotics. Co-authored an IEEE Xplore paper on location-based contact tracing and explored multi-agent reinforcement learning for adversarial defense in final-year project work.",
+    "href": "https://ieeexplore.ieee.org/document/10537381"
+  }
 ];
 
 export default function Experience() {

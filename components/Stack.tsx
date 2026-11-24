@@ -1,46 +1,99 @@
 const stack = [
   {
-    n: "01",
-    category: "Web",
-    desc: "Production web applications, end to end. App Router patterns, type-safe data flow, Web3 wallet integration, edge runtimes.",
-    primary: ["TypeScript", "React", "Next.js (App Router)"],
-    secondary: ["Tailwind CSS", "Framer Motion", "ethers.js / MetaMask", "Radix UI", "shadcn/ui"],
+    "n": "01",
+    "category": "Web",
+    "desc": "Useful interfaces with clear state and reusable components.",
+    "primary": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js"
+    ],
+    "secondary": [
+      "Tailwind CSS",
+      "HTML",
+      "CSS"
+    ]
   },
   {
-    n: "02",
-    category: "Backend",
-    desc: "Schema-first APIs. REST and GraphQL where each fits. Strong opinions on error handling and observability.",
-    primary: ["Node.js", "Express", "Python / FastAPI"],
-    secondary: ["REST", "GraphQL", "WebSockets", "Webhook handlers"],
+    "n": "02",
+    "category": "Backend",
+    "desc": "APIs and repeatable automation workflows, with explicit validation and error handling.",
+    "primary": [
+      "Node.js",
+      "Express",
+      "Python / FastAPI"
+    ],
+    "secondary": [
+      "REST APIs",
+      "Playwright",
+      "Java"
+    ]
   },
   {
-    n: "03",
-    category: "Data",
-    desc: "Schema design that won't bite you in month 6. Indexes where they matter, denormalize where it pays.",
-    primary: ["PostgreSQL", "MongoDB", "Redis"],
-    secondary: ["Prisma ORM", "Mongoose", "Drizzle", "Pinecone (vector)"],
+    "n": "03",
+    "category": "Data",
+    "desc": "Relational storage, document data, and vector retrieval.",
+    "primary": [
+      "PostgreSQL",
+      "SQLite",
+      "MongoDB"
+    ],
+    "secondary": [
+      "SQL",
+      "FAISS",
+      "pandas",
+      "NumPy"
+    ]
   },
   {
-    n: "04",
-    category: "Auth & security",
-    desc: "Auth servers from primitives. JWT and OAuth 2.0 done right. Rate limiting in the right layer.",
-    primary: ["OAuth 2.0", "JWT", "NextAuth.js"],
-    secondary: ["RBAC", "ABAC", "API gateway design", "Rate limiting"],
+    "n": "04",
+    "category": "Auth & security",
+    "desc": "Authentication and authorization systems with tested token and policy behavior.",
+    "primary": [
+      "OAuth 2.0",
+      "OpenID Connect",
+      "JWT / JWKS"
+    ],
+    "secondary": [
+      "PKCE",
+      "RBAC",
+      "ABAC",
+      "Rate limiting"
+    ]
   },
   {
-    n: "05",
-    category: "AI / ML",
-    desc: "Research-grade PyTorch. LLM APIs for production. ViT, MARL, adversarial training as default frameworks.",
-    primary: ["PyTorch", "LLM APIs (Claude, OpenAI)", "Hugging Face"],
-    secondary: ["Vision Transformers", "Multi-agent RL", "Gradio", "LangChain"],
+    "n": "05",
+    "category": "AI / ML",
+    "desc": "Applied experiments in retrieval, model robustness, and agent evaluation.",
+    "primary": [
+      "Python",
+      "PyTorch",
+      "scikit-learn"
+    ],
+    "secondary": [
+      "Sentence embeddings",
+      "Multi-agent RL",
+      "OpenEnv",
+      "OpenAI APIs"
+    ]
   },
   {
-    n: "06",
-    category: "Infrastructure",
-    desc: "Containerized deploys to Vercel and beyond. CI that actually catches things. Observability before it's a fire.",
-    primary: ["Docker", "Vercel", "GitHub Actions"],
-    secondary: ["Linux", "Sentry", "Microservices", "Edge functions"],
-  },
+    "n": "06",
+    "category": "Tools & testing",
+    "desc": "Reproducible development, version control, and automated checks.",
+    "primary": [
+      "Git",
+      "Docker",
+      "pytest"
+    ],
+    "secondary": [
+      "Playwright",
+      "Claude Code",
+      "Codex",
+      "C / C++"
+    ]
+  }
 ];
 
 export default function Stack() {
@@ -59,7 +112,7 @@ export default function Stack() {
             </h2>
             <p className="text-lg text-ink/70 max-w-xl">
               The full stack &mdash; front to back. No skill bars, no
-              percentages. Just what I reach for in production, with a line on{" "}
+              percentages. The tools I use across projects, with a line on{" "}
               <em className="italic">why</em>.
             </p>
           </div>
@@ -75,7 +128,7 @@ export default function Stack() {
               <p className="text-ink/70 mb-6 leading-relaxed">{s.desc}</p>
 
               <div className="mb-4">
-                <div className="num-marker mb-2">Daily</div>
+                <div className="num-marker mb-2">Core</div>
                 <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
                   {s.primary.map((t) => (
                     <li
@@ -89,7 +142,7 @@ export default function Stack() {
               </div>
 
               <div>
-                <div className="num-marker mb-2">Shipped</div>
+                <div className="num-marker mb-2">Also used</div>
                 <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
                   {s.secondary.map((t) => (
                     <li key={t} className="text-sm font-mono text-ink/55">
